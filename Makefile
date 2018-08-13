@@ -18,11 +18,17 @@ export STABLETAG=tor-0.3.3.6
 export DEVTAG=tor-0.3.4.3-alpha
 
 WMLBASE=.
-SUBDIRS=docs eff projects press about download getinvolved donate docs/torbutton
+SUBDIRS=eff projects press about download getinvolved donate docs/torbutton
+
+if [[ -z "$1" ]] || [[ "$1" != "--no-doc" ]] ; then
+  SUBDIRS="doc $SUBDIRS"
+fi
+
 include $(WMLBASE)/Makefile.local
 include $(WMLBASE)/Makefile.common
 
 all: $(SUBDIRS)
+
 docs:
 	$(MAKE) -C "$@" WMLBASE=..
 eff:
