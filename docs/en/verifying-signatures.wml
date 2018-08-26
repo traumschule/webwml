@@ -10,6 +10,18 @@
   </div>
   <div id="maincol">
     <h1>How to verify signatures for packages</h1>
+
+<!-- START TOC -->
+    <ol>
+      <li><a href="#Why">What is a signature and why should I check it?</a></li>
+      <li><a href="#Where">Where do I get the signatures and the keys that made them?</a></li>
+      <li><a href="#Windows">Windows</a></li>
+      <li><a href="#MacosLinux">Mac OS X and Linux</a></li>
+      <li><a href="#BuildVerification">Verifying sha256sums (advanced)</a></li>
+      <li><a href="#Scripts">Scripts</a></li>
+      <li><a href="#MARVerification">Verifying MAR files we ship (advanced)</a></li>
+    </ol>
+<!-- END TOC -->
     <hr>
 
     <p>Digital signature is a process ensuring that a certain package was
@@ -21,6 +33,7 @@
     about how it works see <a href="https://en.wikipedia.org/wiki/Digital_signature">
     https://en.wikipedia.org/wiki/Digital_signature</a>.</p>
 
+    <a name="Why"></a>
     <h3>What is a signature and why should I check it?</h3>
     <hr>
 
@@ -74,6 +87,7 @@
     attacker. The better question to answer is: "Is this file that I
     just downloaded the file that Tor intended me to get?"</p>
 
+    <a name="Where"></a>
     <h3>Where do I get the signatures and the keys that made them?</h3>
     <hr>
     <p>Each file on <a href="<page download/download>">our download
@@ -92,6 +106,7 @@
     signature you should not worry that the reported date may vary.
     </p>
 
+    <a name="Windows"></a>
     <h3>Windows</h3>
     <hr>
     <p>First of all you need to have GnuPG installed before you can verify signatures.
@@ -143,6 +158,7 @@ Primary key fingerprint: EF6E 286D DA85 EA2A 4BA7  DE68 4E2C 6E87 9329 8290
     exchange key fingerprints.
     </p>
 
+    <a name="MacosLinux"></a>
     <h3>Mac OS X and Linux</h3>
     <hr>
 
@@ -288,6 +304,7 @@ Primary key fingerprint: EF6E 286D DA85 EA2A 4BA7  DE68 4E2C 6E87 9329 8290
       build.</li>
     </ul>
 
+    <a id="Scripts"></a>
     <p><a href="https://github.com/isislovecruft/scripts/blob/master/verify-gitian-builder-signatures">Scripts</a>
     to <a href="https://tor.stackexchange.com/questions/648/how-to-verify-tor-browser-bundle-tbb-3-x">automate</a>
     these steps have been written, but to use them you will need to modify
