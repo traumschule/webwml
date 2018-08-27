@@ -47,7 +47,7 @@
     <a href="https://en.wikipedia.org/wiki/Digital_signature">
     https://en.wikipedia.org/wiki/Digital_signature</a>.</p>
 
-    <p class="hint">(Click on each headline to show or hide it.)</p>
+    <p class="hint">(Click on each headline to show or hide the section.)</p>
   </article>
  </div>
 
@@ -56,26 +56,30 @@
    <input id="ac-1" name="accordion-1" type="checkbox" />
    <label for="ac-1">
     <a class="nav" title="link here" href="#Why-verify-signature">&#9668;</a>
-    <h3><a name="Why-verify-signature">Always verify the signature of downloaded files</a></h3>
+    <h3><a name="Why-verify-signature">Always verify the signature of
+        downloaded files</a></h3>
     <hr>
     <p>
     How do you know that the Tor program you have is really the one we made?
-    Digital signatures ensure that the package you are downloading was created by
-    our developers. It uses a cryptographic mechanism to ensure that the software package
-    that you have just downloaded is authentic. <span class="hint">(click to toggle)</span></p>
+    Digital signatures ensure that the package you are downloading was created
+    by our <a href="<>page about/corepeople>">developers</a>. It uses a
+    cryptographic mechanism to ensure that the software package that you have
+    just downloaded is authentic.
+    <span class="hint">(click to toggle)</span></p>
    </label>
    <article class="ac-small">
 
 
     <p>
-    For many Tor users it is important to verify that the Tor software is authentic
-    as they have very real adversaries who might try to give them a fake version
-    of Tor.
+    For many Tor users it is important to verify that the Tor software is
+    authentic as they have very real adversaries who might try to give them a
+    fake version of Tor.
     </p>
 
     <p>
-    If the Tor package has been modified by some attacker it is not safe to use.
-    It doesn't matter how secure and anonymous Tor is if you're not running the real Tor.
+    If the Tor package has been modified by some attacker it is not safe to use
+    it. It doesn't matter how secure and anonymous Tor is if you're not running
+    the real Tor.
     </p>
 
     <p>
@@ -87,26 +91,27 @@
 
     <p>
     There are a variety of attacks that can be used to make you download a fake
-    version of Tor. For example, an attacker could trick you into thinking some other
-    website is a great place to download Tor. You should
-    always download Tor from <a href="https://www.torproject.org"><b>https</b>://www.torproject.org/</a>.
+    version of Tor. For example, an attacker could trick you into thinking some
+    other website is a great place to download Tor. You should always download
+    Tor from
+    <a href="https://www.torproject.org"><b>https</b>://www.torproject.org/</a>.
     </p>
 
     <h4>Always make sure you are browsing over https</h4>
 
     <p>
-    <a href="https://www.torproject.org">https://www.torproject.org/</a> uses https.
-    Https is the secure version of the http protocol which uses encryption and authentication between your
-    browser and the website. This makes it much harder for the attacker
-    to modify your download. But it's not perfect. Some places in the
-    world block the Tor website, making users to download Tor
-    <a href="<page docs/faq>#GetTor">somewhere else</a>.
+    <a href="https://www.torproject.org">https://www.torproject.org/</a> uses
+    https. Https is the secure version of the http protocol which uses
+    encryption and authentication between your browser and the website.
+    This makes it much harder for the attacker to modify your download. But
+    it's not perfect. Some places in the world block the Tor website, making
+    users to download Tor <a href="<page docs/faq>#GetTor">somewhere else</a>.
     </p>
 
     <p>
     Large companies sometimes force employees to use a modified browser,
-    so the company can listen in on all their browsing. We've even <a
-    href="https://blog.torproject.org/blog/diginotar-debacle-and-what-you-should-do-about-it">seen</a>
+    so the company can listen in on all their browsing. We've even
+    <a href="https://blog.torproject.org/blog/diginotar-debacle-and-what-you-should-do-about-it">seen</a>
     attackers who have the ability to trick your browser into thinking
     you're talking to the Tor website with https when you're not.
     </p>
@@ -134,7 +139,8 @@
   <input id="ac-2" name="accordion-2" type="checkbox" checked />
   <label for="ac-2">
     <a class="nav" title="link here" href="#Keys">&#9668;</a>
-    <h3><a name="Keys">Where do I get the signatures and the keys that made them?</a></h3>
+    <h3><a name="Keys">Where do I get the signatures and the keys that made
+        them?</a></h3>
     <hr>
     <p>
     Each file on <a href="<page download/download>">our download
@@ -161,12 +167,28 @@
   </article>
  </div>
 
+  <input id="ac-3" name="accordion-3" type="checkbox" checked />
+  <label for="ac-3">
+    <a class="nav" title="link here" href="#Keys">&#9668;</a>
+    <h3><a name="Keys">How to verify files with OpenPGP signatures</a></h3>
+    <hr>
+    <p>
+    In the following section We now show how you can verify the downloaded file's digital signature on
+    different operating systems. Please notice that a signature is dated the
+    moment the package has been signed. Therefore every time a new file is
+    uploaded a new signature is generated with a different date. As long as you
+    have verified the signature you should not worry that the reported date may
+    vary.
+    </p>
+  </label>
+  <article class="ac-medium">
+
 <!-- Windows -->
  <div>
-  <input id="ac-3" name="accordion-3" type="checkbox" />
-   <label for="ac-3">
+  <input id="ac-3-1" name="accordion-3-1" type="checkbox" />
+   <label for="ac-3-1">
     <a class="nav" title="link here" href="#Windows">&#9668;</a>
-    <h3><a name="Windows">Windows</a></h3>
+    <h4><a name="Windows">Windows</a></h4>
     <hr>
    </label>
    <article class="ac-small">
@@ -239,10 +261,10 @@ Primary key fingerprint: EF6E 286D DA85 EA2A 4BA7  DE68 4E2C 6E87 9329 8290
 
 <!-- MacOS / Linux -->
  <div>
-  <input id="ac-4" name="accordion-4" type="checkbox" />
-   <label for="ac-4">
+  <input id="ac-4-1" name="accordion-4-1" type="checkbox" />
+   <label for="ac-4-1">
     <a class="nav" title="link here" href="#MacosLinux">&#9668;</a>
-    <h3><a name="MacosLinux">Mac OS X and Linux</a></h3>
+    <h4><a name="MacosLinux">Mac OS X and Linux</a></h4>
     <hr>
    </label>
    <article class="ac-small">
@@ -326,6 +348,10 @@ Primary key fingerprint: EF6E 286D DA85 EA2A 4BA7  DE68 4E2C 6E87 9329 8290
     <p>See <a
     href="https://www.gnupg.org/documentation/">https://www.gnupg.org/documentation/</a>
     to learn more about GnuPG.</p>
+    <a class="nav" href="#TOC" title="go up">&uarr;</a>
+  </article>
+ </div>
+
     <a class="nav" href="#TOC" title="go up">&uarr;</a>
   </article>
  </div>
