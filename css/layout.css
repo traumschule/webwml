@@ -1368,6 +1368,10 @@ p.blogDate {
 .accordion {
   margin: 10px auto 30px auto;
 }
+.accordion pre {
+  padding: 15px;
+  line-height: 150%;
+}
 .accordion .hint {
   color: grey;
   font-size: 90%;
@@ -1432,6 +1436,9 @@ p.blogDate {
   border: solid 1px #66a516;
   padding: 15px;
   margin-bottom: 30px;
+}
+.accordion article h4 {
+  margin: 15px;
 }
 .accordion article.ac-box label,
 .accordion article.ac-box label h4 {

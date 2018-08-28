@@ -163,7 +163,7 @@
   <div>
    <input id="ac-2-1" name="accordion-2" type="radio" checked />
    <article class="ac-os">
-    <h3>Import OpenPGP keys on Windows</h3>
+    <h3>Import OpenPGP key on Windows</h3>
     <p>
     First of all you need to have GnuPG installed before you can verify
     signatures.
@@ -180,7 +180,9 @@
     The Tor Browser team signs Tor Browser releases. Import its key
     (0x4E2C6E8793298290) by starting <i>cmd.exe</i> and typing:
     </p>
-    <pre>gpg.exe --keyserver pool.sks-keyservers.net --recv-keys 0x4E2C6E8793298290</pre>
+    <pre>
+    > gpg.exe --keyserver pool.sks-keyservers.net --recv-keys 0x4E2C6E8793298290
+    </pre>
     <p>
    </article>
   </div>
@@ -188,7 +190,7 @@
   <div>
    <input id="ac-2-2" name="accordion-2" type="radio" />
    <article class="ac-os">
-    <h3>Import OpenPGP keys on Mac OS</h3>
+    <h3>Import OpenPGP key on Mac OS</h3>
     <p>
     You need to have GnuPG installed before you can verify
     signatures. Install it from
@@ -199,7 +201,9 @@
     your package. The Tor Browser team signs Tor Browser releases. Import its
     key (0x4E2C6E8793298290) by starting the terminal under "Applications"
     and typing:</p>
-    <pre>gpg --keyserver pool.sks-keyservers.net --recv-keys 0x4E2C6E8793298290</pre>
+    <pre>
+    $ gpg --keyserver pool.sks-keyservers.net --recv-keys 0x4E2C6E8793298290
+    </pre>
     <p>
    </article>
   </div>
@@ -207,7 +211,7 @@
   <div>
    <input id="ac-2-3" name="accordion-2" type="radio" />
    <article class="ac-os">
-    <h3>Import OpenPGP keys on Linux</h3>
+    <h3>Import OpenPGP key on Linux</h3>
     <p>
     You need to have GnuPG installed before you can verify
     signatures. It's probably GnuPG is alreadyy installed on your
@@ -218,7 +222,9 @@
     The next step is to use GnuPG to import the key that signed
     your package. The Tor Browser team signs Tor Browser releases. Import its
     key (0x4E2C6E8793298290) by starting the terminal and typing:</p>
-    <pre>gpg --keyserver pool.sks-keyservers.net --recv-keys 0x4E2C6E8793298290</pre>
+    <pre>
+    $ gpg --keyserver pool.sks-keyservers.net --recv-keys 0x4E2C6E8793298290
+    </pre>
     <p>
    </article>
   </div>
@@ -227,7 +233,9 @@
     After importing the key, you can verify that the fingerprint
     is correct:
     </p>
-    <pre>gpg --fingerprint 0x4E2C6E8793298290</pre>
+    <pre>
+    gpg --fingerprint 0x4E2C6E8793298290
+    </pre>
     <p>You should see:</p>
     <pre>
 pub   rsa4096/0x4E2C6E8793298290 2014-12-15 [C] [expires: 2020-08-24]
@@ -248,7 +256,7 @@ sub   rsa4096/0xEB774491D9FF06E2 2018-05-26 [S] [expires: 2020-09-12]
  <input id="ac-3" name="accordion-3" type="checkbox" />
  <label for="ac-3">
     <a class="nav" title="link here" href="#VerifySignature">&#9668;</a>
-    <h3><a name="VerifySignature">Step 2: Verification with OpenGPG signatures</a></h3>
+    <h3><a name="VerifySignature">Step 2: Verification with OpenGPG signature</a></h3>
     <hr>
     <p>This section explains how to verify the downloaded file's digital
     signature on different operating systems. Please notice that a signature is
@@ -272,13 +280,16 @@ sub   rsa4096/0xEB774491D9FF06E2 2018-05-26 [S] [expires: 2020-09-12]
   <div>
    <input id="ac-3-1" name="accordion-3" type="radio" checked />
    <article class="ac-os">
-    <h3>Verify with an OpenPGP signature on Windows</h3>
+    <h3>Verify with OpenPGP signature on Windows</h3>
     <p>
     To verify the signature of the package you downloaded, you will need
     to download the ".asc" file as well. Assuming you downloaded the
     package and its signature to your Desktop, run:
     </p>
-    <pre>gpg.exe --verify C:\Users\Alice\Desktop\torbrowser-install-<version-torbrowserbundle>_en-US.exe.asc</pre>
+    <pre>
+    > gpg.exe --verify C:\Users\Alice\Desktop\torbrowser-install-<version-torbrowserbundle>_en-US.exe.asc
+    </pre>
+
     <p>Please substitute "Alice" with your own username.</p>
     <p>The output should say "Good signature":</p>
     <pre>
@@ -297,14 +308,16 @@ Primary key fingerprint: EF6E 286D DA85 EA2A 4BA7  DE68 4E2C 6E87 9329 8290
   <div>
    <input id="ac-3-2" name="accordion-3" type="radio" />
    <article class="ac-os">
-    <h3>Verify with an OpenPGP signature on Mac OS</h3>
+    <h3>Verify with OpenPGP signature on Mac OS</h3>
     <p>
     To verify the signature of the package you downloaded, you will need
     to download the ".asc" file as well. Assuming you downloaded the
     package and its signature to your Downloads folder, run:
     </p>
 
-    <pre>gpg --verify ~/Downloads/TorBrowser-<version-torbrowserbundleosx64>_en-US.dmg{.asc*,}</pre>
+    <pre>
+    $ gpg --verify ~/Downloads/TorBrowser-<version-torbrowserbundleosx64>_en-US.dmg{.asc*,}
+    </pre>
 
     <p>The output should say "Good signature":</p>
 
@@ -324,7 +337,7 @@ Primary key fingerprint: EF6E 286D DA85 EA2A 4BA7  DE68 4E2C 6E87 9329 8290
   <div>
    <input id="ac-3-3" name="accordion-3" type="radio" />
    <article class="ac-os">
-    <h3>Verify with an OpenPGP signature on Linux</h3>
+    <h3>Verify with OpenPGP signature on Linux</h3>
     <p>
     To verify the signature of the package you downloaded, you will need
     to download the ".asc" file as well. Assuming you downloaded the
@@ -333,7 +346,9 @@ Primary key fingerprint: EF6E 286D DA85 EA2A 4BA7  DE68 4E2C 6E87 9329 8290
 
     <p>Change 64 to 32 if you have the 32-bit package:</p>
 
-    <pre>gpg --verify tor-browser-linux64-<version-torbrowserbundlelinux64>_en-US.tar.xz.asc</pre>
+    <pre>
+    $ gpg --verify tor-browser-linux64-<version-torbrowserbundlelinux64>_en-US.tar.xz.asc
+    </pre>
 
     <p>The output should say "Good signature":</p>
 
@@ -389,7 +404,7 @@ Primary key fingerprint: EF6E 286D DA85 EA2A 4BA7  DE68 4E2C 6E87 9329 8290
   <input id="ac-4" name="accordion-4" type="checkbox" />
    <label for="ac-4">
     <a class="nav" title="link here" href="#ChecksumVerification">&#9668;</a>
-    <h3><a id="Checksumerification">Step 3: Verify the file integrity</a></h3>
+    <h3><a id="ChecksumVerification">Step 3: Verify the file integrity by sha256 checksum</a></h3>
     <hr>
     <p>
     Build reproducibility is a
@@ -420,11 +435,14 @@ Primary key fingerprint: EF6E 286D DA85 EA2A 4BA7  DE68 4E2C 6E87 9329 8290
       for Tor Browser <version-torbrowserbundlelinux64>.
       </li>
       <li>
-      Retrieve the signers' GPG keys with this id like described above<br/>
-      (Other developers' key IDs can be found on
-      <a href="<page docs/signing-keys>">this page)</a>:    
-      <pre id="ttb-key">0x4E2C6E8793298290</pre></li>
+      Retrieve the signers' GPG key with following ID with the method <a href="#ImportKey">described above</a>:<br/>
+      (Other developers' key IDs can be found
+      <a href="<page docs/signing-keys>">here)</a>
+      </li>
      </ul>
+     <pre>
+     0x4E2C6E8793298290
+     </pre>
   </article>
   <article class="ac-box">
   
@@ -444,14 +462,18 @@ Primary key fingerprint: EF6E 286D DA85 EA2A 4BA7  DE68 4E2C 6E87 9329 8290
 
 <!-- Windows -->
   <div>
-    <input id="ac-4-1" name="accordion-4" type="radio" />
+    <input id="ac-4-1" name="accordion-4" type="radio" checked />
    <article class="ac-os">
+    <!--<pre id="ttb-key">
+    > gpg.exe --keyserver pool.sks-keyservers.net --recv-keys 0x4E2C6E8793298290
+    </pre>-->
     <h3>Verififcation with a checksum on Windows</h3>
     <h4>Verify the signature of the checksum file</h4>
     <p>
     Verify the sha256sums-unsigned-build.txt file by executing this command:
     </p>
-    <pre>gpg.exe --verify sha256sums-unsigned-build.txt.asc sha256sums-unsigned-build.txt
+    <pre>
+    > gpg.exe --verify sha256sums-unsigned-build.txt.asc sha256sums-unsigned-build.txt
     </pre>
 
     <p>
@@ -461,23 +483,25 @@ Primary key fingerprint: EF6E 286D DA85 EA2A 4BA7  DE68 4E2C 6E87 9329 8290
     </p>
 
     <h4>Verify the file integrity of Tor Browser</h4>
-     <ul>
-      <li>If you want to verify a Windows Tor Browser package you need to first
-      strip off the authenticode signature of it.<br/>
-      Tools that can be used for this purpose are
-      <a href="http://osslsigncode.sourceforge.net">osslsigncode</a> and
-      <a href="http://forum.xda-developers.com/showthread.php?t=416175">delcert.exe</a>.
-      Assuming you have built e.g. <tt>osslsigncode</tt> on a Linux computer you can enter
-      </li>
-      <pre>C:\path\to\osslsigncode remove-signature &#92;
-      C:\path\to\your\&lt;TOR BROWSER FILE NAME&gt;.exe &lt;TOR BROWSER FILE NAME&gt;.exe
-      </pre>
+    <p>
+    If you want to verify a Windows Tor Browser package you need to first
+    strip off the authenticode signature of it.<br/>
+    Tools that can be used for this purpose are
+    <a href="http://osslsigncode.sourceforge.net">osslsigncode</a> and
+    <a href="http://forum.xda-developers.com/showthread.php?t=416175">delcert.exe</a>.
+    Assuming you have built e.g. <tt>osslsigncode</tt> on a Linux computer you can enter
+    </p>
+    <pre>
+    > C:\path\to\osslsigncode remove-signature &#92;
+        where\you\saved\\&lt;TOR BROWSER FILE NAME&gt;.exe &lt;TOR BROWSER FILE NAME&gt;.exe
+    </pre>
 
-      <li>Now use the sha256sum of the Tor Browser package with the
-      <a href="http://md5deep.sourceforge.net/">hashdeep utility</a> and run
-      </li>
-      <pre>C:\location\where\you\saved\hashdeep -c sha256sum &lt;TOR BROWSER FILE NAME&gt;.exe</pre>
-     </ul>
+    <p>Now use the sha256sum of the Tor Browser package with the
+    <a href="http://md5deep.sourceforge.net/">hashdeep utility</a> and run
+    </p>
+    <pre>
+    C:\location\of\hashdeep -c sha256sum &lt;TOR BROWSER FILE NAME&gt;.exe
+    </pre>
    </article>
   </div>
 <!-- Mac OS --><!--
@@ -489,38 +513,40 @@ Primary key fingerprint: EF6E 286D DA85 EA2A 4BA7  DE68 4E2C 6E87 9329 8290
 -->
 
 <!-- Linux -->
-    <input id="ac-4-3" name="accordion-4" type="radio" />
+  <div>
+   <input id="ac-4-3" name="accordion-4" type="radio" />
    <article class="ac-os ac-4-3">
+    <!--<pre id="ttb-key">
+    $ gpg --keyserver pool.sks-keyservers.net --recv-keys 0x4E2C6E8793298290
+    </pre>-->
     <h3>Verififcation with a checksum on Linux</h3>
     <h4>Verify the signature of the checksum file</h4>
     <ul>
      <li>Verify the sha256sums-unsigned-build.txt with this command:</li>
-     <pre>gpg --verify sha256sums-unsigned-build.txt.asc sha256sums-unsigned-build.txt
-     </pre>
+     <pre>$ gpg --verify sha256sums-unsigned-build.txt.asc sha256sums-unsigned-build.txt</pre>
 
-     <li>><!-- TODO which OSs are meant here? -->
+     <li><!-- TODO which OSs are meant here? -->
      In case your operating system is adding the .txt extension automatically
      to the SHA256 sums signature file strip it again by running
-     </li>>
-     <pre>mv sha256sums-unsigned-build.txt.asc.txt sha256sums-unsigned-build.txt.asc</pre>
-
-     <li>>
-     Verify the sha256sums-unsigned-build.txt file by executing this command:
      </li>
-     <pre>gpg --verify sha256sums-unsigned-build.txt.asc sha256sums-unsigned-build.txt
-     </pre>
+     <pre>$ mv sha256sums-unsigned-build.txt.asc.txt sha256sums-unsigned-build.txt.asc</pre>
 
      <li>
-     You should see a message like
-     <pre>"Good signature from &lt;DEVELOPER NAME&gt;"</pre>.
-     If you don't, there is a problem. Try these steps again.
+     Verify the sha256sums-unsigned-build.txt file by executing this command:
      </li>
+     <pre>$ gpg --verify sha256sums-unsigned-build.txt.asc sha256sums-unsigned-build.txt</pre>
+
+     <li>
+     If you don't see a message like this, there is a problem
+     and you should try these steps again:
+     </li>
+     <pre>"Good signature from &lt;DEVELOPER NAME&gt;"</pre>.
     </ul>
 
     <h4>Verify the file integrity of Tor Browser</h4>
     <ul>
      <li>Calculate the SHA-256 checksum of Tor Browser:</li>
-     <pre>sha256sum &lt;TOR BROWSER FILE NAME&gt;.tar.gz</pre>
+     <pre>$ sha256sum &lt;TOR BROWSER FILE NAME&gt;.tar.gz</pre>
 
      <li>You will see a string of letters and numbers.</li>
 
@@ -534,7 +560,8 @@ Primary key fingerprint: EF6E 286D DA85 EA2A 4BA7  DE68 4E2C 6E87 9329 8290
      If they match, you've successfully verified the build.
      </li>
     </ul>
-   </article>
+    </article>
+   </div>
    <a class="nav" href="#TOC" title="go up">&uarr;</a>
   </article>
  </div>
@@ -560,10 +587,10 @@ Primary key fingerprint: EF6E 286D DA85 EA2A 4BA7  DE68 4E2C 6E87 9329 8290
     directory to remove the embedded signature(s). The steps to get the unsigned
     MAR file on a 64 bit Linux are</p>
     <pre>
-    cd /path/to/MAR/file
-    unzip /path/to/gitian-builder/inputs/mar-tools-linux64.zip
-    export LD_LIBRARY_PATH=/path/to/MAR/file/mar-tools
-    mar-tools/signmar -r your-signed-mar-file.mar your-unsigned-mar-file.mar</pre>
+    $ cd /path/to/MAR/file
+    $ unzip /path/to/gitian-builder/inputs/mar-tools-linux64.zip
+    $ export LD_LIBRARY_PATH=/path/to/MAR/file/mar-tools
+    $ mar-tools/signmar -r your-signed-mar-file.mar your-unsigned-mar-file.mar</pre>
     <p>Now you can compare the SHA256 sum of <tt>your-unsigned-mar-file.mar</tt>
     with the one provided in the <tt>sha265sums-unsigned-build.txt</tt> or
     <tt>sha256sums-unsigned-build.incremental.txt</tt> as outlined in
@@ -583,7 +610,7 @@ Primary key fingerprint: EF6E 286D DA85 EA2A 4BA7  DE68 4E2C 6E87 9329 8290
     <a href="<page about/contact>#support">Reach out to us</a>!</p>
    </label>
    <article class="ac-small">
-   
+    <p>Send us your question!</p>
     <a class="nav" href="#TOC" title="go up">&uarr;</a>
   </article>
  </div>
@@ -601,6 +628,9 @@ Primary key fingerprint: EF6E 286D DA85 EA2A 4BA7  DE68 4E2C 6E87 9329 8290
     them yourself with the latest Tor Browser filename.</p>
    </label>
    <article class="ac-small">
+    <p>
+    This needs to be explained. <a href="<page getinvolved/volunteer>">Help!</a>
+    </p>
     <a class="nav" href="#TOC" title="go up">&uarr;</a>
   </article>
  </div>
