@@ -156,7 +156,7 @@
 
    <p><span class="hint">Choose your operating system:</span>
    <label for="ac-2-1"><a name="KeyWindows">&#9658; Windows</a></label>
-   <label for="ac-2-2"><a name="KeyMacOS">&#9658; Mac OS X</a></label>
+   <label for="ac-2-2"><a name="KeyMacOS">&#9658; macOS</a></label>
    <label for="ac-2-3"><a name="KeyLinux">&#9658; Linux</a></label>
    </p>
 <!-- Windows -->
@@ -186,11 +186,11 @@
     <p>
    </article>
   </div>
-<!-- MacOS -->
+<!-- macOS -->
   <div>
    <input id="ac-2-2" name="accordion-2" type="radio" />
    <article class="ac-os">
-    <h3>Import OpenPGP key on Mac OS</h3>
+    <h3>Import OpenPGP key on macOS</h3>
     <p>
     You need to have GnuPG installed before you can verify
     signatures. Install it from
@@ -270,7 +270,7 @@ sub   rsa4096/0xEB774491D9FF06E2 2018-05-26 [S] [expires: 2020-09-12]
   <article class="ac-box">
    <p><span class="hint">Choose your operating system:</span>
    <label for="ac-3-1"><a name="VerifyWindows">&#9658; Windows</a></label>
-   <label for="ac-3-2"><a name="VerifyMacOS">&#9658; Mac OS X</a></label>
+   <label for="ac-3-2"><a name="VerifyMacOS">&#9658; macOS</a></label>
    <label for="ac-3-3"><a name="VerifyLinux">&#9658; Linux</a></label>
    </p>
    <p>
@@ -305,11 +305,11 @@ Primary key fingerprint: EF6E 286D DA85 EA2A 4BA7  DE68 4E2C 6E87 9329 8290
     </pre>
    </article>
   </div>
-<!-- MacOS -->
+<!-- macOS -->
   <div>
    <input id="ac-3-2" name="accordion-3" type="radio" />
    <article class="ac-os">
-    <h3>Verify with OpenPGP signature on Mac OS</h3>
+    <h3>Verify with OpenPGP signature on macOS</h3>
     <p>
     To verify the signature of the package you downloaded, you will need
     to download the ".asc" file as well. Assuming you downloaded the
@@ -317,8 +317,8 @@ Primary key fingerprint: EF6E 286D DA85 EA2A 4BA7  DE68 4E2C 6E87 9329 8290
     </p>
 
     <p>
-    The easiest way to verify an "asc" file is to open it by double-clicking
-    on it, or using the keying command-O. Alternatively type into the terminal:
+    The easiest way to verify an ".asc" file is to open it by double-clicking
+    on it (or using the keying command-O), better type into the terminal:
     </p>
 
     <pre>
@@ -393,8 +393,10 @@ Primary key fingerprint: EF6E 286D DA85 EA2A 4BA7  DE68 4E2C 6E87 9329 8290
     Notice that there is a warning because you haven't assigned a trust
     index to this person. This means that GnuPG verified that the key made
     that signature, but it's up to you to decide if that key really belongs
-    to the developer. As international travel to meet the developer might be
-    unfeasable you are left with trusting other people who signed this key.
+    to the developer. Since international travel to meet the developer might be
+    unfeasable you can ignore this warning or try to use another device or
+    another internet connection to compare the key fingerprints listed
+    <a href="<page doc/signing-keys>">here</a>.
     </p>
 
     <p>To learn more about GnuPG see
@@ -460,10 +462,6 @@ Primary key fingerprint: EF6E 286D DA85 EA2A 4BA7  DE68 4E2C 6E87 9329 8290
 
     <label for="ac-4-1"><a name="ChecksumsWindows">&#9658; Windows</a></label>
    </span>
-   <!--<span>
-   <input id="ac-4-2" name="accordion-4" type="radio" />
-   <label for="ac-4-2"><a name="ChecksumMacOS">MacOS</a></label>
-   </span>-->
    <span>
     <label for="ac-4-3"><a name="ChecksumsLinux">&#9658; Linux</a></label>
    </span>
@@ -473,9 +471,6 @@ Primary key fingerprint: EF6E 286D DA85 EA2A 4BA7  DE68 4E2C 6E87 9329 8290
   <div>
     <input id="ac-4-1" name="accordion-4" type="radio" checked />
    <article class="ac-os">
-    <!--<pre id="ttb-key">
-    > gpg.exe --keyserver pool.sks-keyservers.net --recv-keys 0x4E2C6E8793298290
-    </pre>-->
     <h3>Verififcation with a checksum on Windows</h3>
     <h4>Verify the signature of the checksum file</h4>
     <p>
@@ -513,21 +508,11 @@ Primary key fingerprint: EF6E 286D DA85 EA2A 4BA7  DE68 4E2C 6E87 9329 8290
     </pre>
    </article>
   </div>
-<!-- Mac OS --><!--
- <div>
-   <article class="ac-os">
-     This process does not work on macOS yet due to Apple's codesigning requirement.
-   </article>
- </div>
--->
 
 <!-- Linux -->
   <div>
    <input id="ac-4-3" name="accordion-4" type="radio" />
    <article class="ac-os ac-4-3">
-    <!--<pre id="ttb-key">
-    $ gpg --keyserver pool.sks-keyservers.net --recv-keys 0x4E2C6E8793298290
-    </pre>-->
     <h3>Verififcation with a checksum on Linux</h3>
     <h4>Verify the signature of the checksum file</h4>
     <ul>
