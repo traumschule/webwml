@@ -531,7 +531,7 @@ Primary key fingerprint: EF6E 286D DA85 EA2A 4BA7  DE68 4E2C 6E87 9329 8290
     <h3>Verififcation with a checksum on Linux</h3>
     <h4>Verify the signature of the checksum file</h4>
     <ul>
-     <li>Verify the sha256sums-unsigned-build.txt with this command:</li>
+     <li>Verify the <a href="https://torproject.org/dist/torbrowser/<version-torbrowserbundle-all>/sha256sums-signed-build.txt">sha256sums-signed-build.txt</a> with this command:</li>
      <pre>$ gpg --verify sha256sums-unsigned-build.txt.asc sha256sums-unsigned-build.txt</pre>
 
      <li><!-- TODO which OSs are meant here? -->
@@ -583,13 +583,137 @@ Primary key fingerprint: EF6E 286D DA85 EA2A 4BA7  DE68 4E2C 6E87 9329 8290
     <h3><a name="MARVerification">MAR verification</a></h3>
     <hr>
     <p>
-    Starting with Tor Browser 4.5a4 we sign our MAR files which helps
-    securing our update process. The downside of this is the need for additional
-    instructions to verify that the MAR files we ship are indeed the ones we
-    produced with our rbm setup.
+    The Mozilla ARchive (MAR) format is used by the update system to deliver
+    update packages. Starting with Tor Browser 4.5a4 we sign our
+    <a href="https://wiki.mozilla.org/Software_Update:MAR">MAR</a> files which
+    helps securing our update process. The downside of this is the need for
+    additional instructions to verify that the MAR files we ship are indeed the
+    ones we produced with our rbm setup.
     </p>
    </label>
    <article class="ac-small">
+    <h3>Install python and MAR tool</h3>
+    <ul>
+     <li>
+    Because the MAR files we ship are signed, they differ. Thus checksum
+    verification requires to extract the unsigned MAR file first. For this
+    Mozilla's mar utitility is needed. It is written in Python, so you need to
+    install <a href="https://www.python.org/">python</a> first
+    (On debian run: <pre>apt install python-pip</pre>)
+     </li>
+     <li>Install Mar tool. Add --user to install it to ~/.local/bin/ and add it to you PATH: export PATH=~/.local/bin/:$PATH</li>
+    <pre>
+    pip install mar
+    </pre>
+     <li>Test that it works:</li>
+    <pre>
+    mar --version
+    </pre>
+
+
+    <li>
+    When you <a href="<page download/download>">downloaded</a> the .mar file and
+    <a href="https://torproject.org/dist/torbrowser/<version-torbrowserbundle-all>/sha256sums-signed-build.txt">sha256sums-signed-build.txt</a>
+    verify it with:
+
+    </li>
+    <pre>
+    mar -v  tor-browser-win64-<version-torbrowserbundle-all>_en-US.mar
+    </pre>
+
+https://torproject.org/dist/torbrowser/<version-torbrowserbundle-all>/tor-browser-win64-<version-torbrowserbundle-all>_en-US.mar
+https://torproject.org/dist/torbrowser/<version-torbrowserbundle-all>/tor-browser-win32-<version-torbrowserbundle-all>_en-US.mar
+
+https://torproject.org/dist/torbrowser/<version-torbrowserbundle-all>/tor-browser-osx64-<version-torbrowserbundle-all>_en-US.mar
+https://torproject.org/dist/torbrowser/<version-torbrowserbundle-all>/tor-browser-osx32-<version-torbrowserbundle-all>_en-US.mar
+
+https://torproject.org/dist/torbrowser/<version-torbrowserbundle-all>/tor-browser-linux64-<version-torbrowserbundle-all>_en-US.mar
+https://torproject.org/dist/torbrowser/<version-torbrowserbundle-all>/tor-browser-linux32-<version-torbrowserbundle-all>_en-US.mar
+
+wget https://torproject.org/dist/torbrowser/<version-torbrowserbundle-all>/sha256sums-signed-build.txt
+wget https://torproject.org/dist/torbrowser/<version-torbrowserbundle-all>/sha256sums-signed-build.txt.asc
+
+wget http://rqef5a5mebgq46y5.onion/torbrowser/<version-torbrowserbundle-all>/mar-tools-linux32.zip
+wget http://rqef5a5mebgq46y5.onion/torbrowser/<version-torbrowserbundle-all>/mar-tools-linux32.zip.asc
+
+gpg --recv EB774491D9FF06E2
+gpg --verify sha256sums-signed-build.txt.asc
+
+<pre>
+$ gpg --verify sha256sums-signed-build.txt.asc 
+gpg: assuming signed data in 'sha256sums-signed-build.txt'
+gpg: Signature made Mon 20 Aug 2018 01:37:39 AM CEST
+gpg:                using RSA key EB774491D9FF06E2
+gpg: Good signature from "Tor Browser Developers (signing key) &lt;torbrowser@torproject.org&gt;" [unknown]
+gpg: WARNING: This key is not certified with a trusted signature!
+gpg:          There is no indication that the signature belongs to the owner.
+Primary key fingerprint: EF6E 286D DA85 EA2A 4BA7  DE68 4E2C 6E87 9329 8290
+     Subkey fingerprint: 1107 75B5 D101 FB36 BC6C  911B EB77 4491 D9FF 06E2
+</pre>
+
+$ grep tor-browser-linux32-8.0a10_en-US.mar sha256sums-signed-build.txt
+fc610ca644c0c715dec65d9197af4b9aedbedd6ece0d82999af897d9236426fc  tor-browser-linux32-8.0a10_en-US.mar
+
+$ sha256sum tor-browser-linux32-8.0a10_en-US.mar                                 
+fc610ca644c0c715dec65d9197af4b9aedbedd6ece0d82999af897d9236426fc  tor-browser-linux32-8.0a10_en-US.mar
+
+Looks good!
+
+Download <a href="http://rqef5a5mebgq46y5.onion/torbrowser/<version-torbrowserbundle-all>/mar-tools-linux32.zip">mar-tools</a> and <a href="http://rqef5a5mebgq46y5.onion/torbrowser/<version-torbrowserbundle-all>/mar-tools-linux32.zip.asc">mar-tools.asc</a>
+
+$ gpg --verify mar-tools-linux32.zip.asc 
+gpg: assuming signed data in 'mar-tools-linux32.zip'
+gpg: Signature made Mon 20 Aug 2018 01:41:53 AM CEST
+gpg:                using RSA key EB774491D9FF06E2
+gpg: Good signature from "Tor Browser Developers (signing key) <torbrowser@torproject.org>" [unknown]
+gpg: WARNING: This key is not certified with a trusted signature!
+gpg:          There is no indication that the signature belongs to the owner.
+Primary key fingerprint: EF6E 286D DA85 EA2A 4BA7  DE68 4E2C 6E87 9329 8290
+     Subkey fingerprint: 1107 75B5 D101 FB36 BC6C  911B EB77 4491 D9FF 06E2
+
+Extract the archive:
+<pre>
+unzip mar-tools-linux32.zip
+</pre>
+
+<pre>
+$ ./mar-tools/signmar -r tor-browser-osx64-8.0a9-8.0a10_en-US.incremental.mar tor-browser-osx64-8.0a9-8.0a10_en-US.incremental-unsigned.mar 
+./mar-tools/signmar: error while loading shared libraries: libmozsqlite3.so: cannot open shared object file: No such file or directory
+</pre>
+
+# apt-file search libmozsqlite3.so
+thunderbird: /usr/lib/thunderbird/libmozsqlite3.so
+
+apt install thunderbird
+
+export LD_LIBRARY_PATH=/usr/lib/thunderbird
+
+
+
+http://rqef5a5mebgq46y5.onion/torbrowser/8.0a10/TorBrowser-8.0a10-osx64_en-US.dmg.asc
+
+
+http://rqef5a5mebgq46y5.onion/torbrowser/8.0a10/tor-browser-linux32-8.0a10_en-US.mar
+
+<!-- Windows -->
+  <div>
+   <input id="ac-4-3" name="accordion-4" type="radio" />
+   <article class="ac-os ac-4-3">
+    <p>
+    Sorry, this section has not been written. Can you help?
+    </p>
+    <p>You need a recent Python (with pip) and run
+    <pre>
+    > pip install mar
+    > mar -k :mozilla-nightly -v complete.mar
+    </pre>
+    </article>
+   </div>
+
+<!-- MacOS -->
+  <div>
+   <input id="ac-4-3" name="accordion-4" type="radio" />
+   <article class="ac-os ac-4-3">
     <p>
     Assuming the verification happens on a Linux computer one first needs the
     <tt>mar-tools-linux*.zip</tt> out of the <tt>gitian-builder/inputs</tt>
@@ -603,10 +727,35 @@ Primary key fingerprint: EF6E 286D DA85 EA2A 4BA7  DE68 4E2C 6E87 9329 8290
     <p>Now you can compare the SHA256 sum of <tt>your-unsigned-mar-file.mar</tt>
     with the one provided in the <tt>sha265sums-unsigned-build.txt</tt> or
     <tt>sha256sums-unsigned-build.incremental.txt</tt> as outlined in
-    <a href="#ChekcksumVerification">Checksum verification</a> above.
+    <a href="#ChecksumVerification">Checksum verification</a> above.
     </p>
-   </article>
- </div>
+    </article>
+   </div>
+
+<!-- Linux -->
+  <div>
+   <input id="ac-4-3" name="accordion-4" type="radio" />
+   <article class="ac-os ac-4-3">
+    <p>
+    Assuming the verification happens on a Linux computer one first needs the
+    <tt>mar-tools-linux*.zip</tt> out of the <tt>gitian-builder/inputs</tt>
+    directory to remove the embedded signature(s). The steps to get the unsigned
+    MAR file on a 64 bit Linux are</p>
+    <pre>
+    $ cd /path/to/MAR/file
+    $ unzip /path/to/gitian-builder/inputs/mar-tools-linux64.zip
+    $ export LD_LIBRARY_PATH=/path/to/MAR/file/mar-tools
+    $ mar-tools/signmar -r your-signed-mar-file.mar your-unsigned-mar-file.mar</pre>
+    <p>Now you can compare the SHA256 sum of <tt>your-unsigned-mar-file.mar</tt>
+    with the one provided in the <tt>sha265sums-unsigned-build.txt</tt> or
+    <tt>sha256sums-unsigned-build.incremental.txt</tt> as outlined in
+    <a href="#ChecksumVerification">Checksum verification</a> above.
+    </p>
+    </article>
+   </div>
+
+   </article><!-- end ac-box -->
+ </div><!-- emd MAR -->
 
 <!-- Troubleshooting -->
  <div>
