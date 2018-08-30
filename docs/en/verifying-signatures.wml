@@ -318,7 +318,7 @@ Primary key fingerprint: EF6E 286D DA85 EA2A 4BA7  DE68 4E2C 6E87 9329 8290
 
     <p>
     The easiest way to verify an ".asc" file is to open it by double-clicking
-    on it (or using the keying command-O), better type into the terminal:
+    on it, or typing command-O. Alternatively type into the terminal:
     </p>
 
     <pre>
@@ -396,7 +396,7 @@ Primary key fingerprint: EF6E 286D DA85 EA2A 4BA7  DE68 4E2C 6E87 9329 8290
     to the developer. Since international travel to meet the developer might be
     unfeasable you can ignore this warning or try to use another device or
     another internet connection to compare the key fingerprints listed
-    <a href="<page doc/signing-keys>">here</a>.
+    <a href="<page docs/signing-keys>">here</a>.
     </p>
 
     <p>To learn more about GnuPG see
