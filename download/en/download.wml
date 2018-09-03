@@ -25,10 +25,17 @@
 <!-- BEGIN TEASER WARNING -->
     <div class="warning-top">
       <h2>Want Tor to really work?</h2>
-	<p>You need to change some of your habits, as some things won't work exactly as
-you are used to. Please read the <a href="#warning">full list of warnings</a> for details.
-	</p>
-      </div>
+        <p>You need to change some of your habits, as some things won't work exactly as
+        you are used to. Please read the <a href="#warning">full list of warnings</a> for details.
+        Always <a href="<page docs/verifying-signatures>">
+        verify OpenPGP package signatures</a> (sig) to make sure you've
+        downloaded the file we intended you to get.
+        We also offer
+        <a href="https://dist.torproject.org/torbrowser/<version-torbrowserbundle>/sha256sums-signed-build.txt">
+        sha256 checksums</a>.
+        The Firefox ESR in our bundles is modified from the default Firefox ESR.
+        </p>
+    </div>
 <!-- END TEASER WARNING -->
 
 <!-- START DOWNLOADS -->

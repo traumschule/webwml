@@ -89,6 +89,13 @@
 
 </table>
 
+<p>
+Always <a href="<page docs/verifying-signatures>">verify OpenPGP package signatures</a>
+(sig) to make sure you've downloaded the file we intended you to get.<br/>
+We also offer <a href="https://dist.torproject.org/torbrowser/<version-torbrowserbundle>/sha256sums-signed-build.txt">
+sha256 checksums</a>.
+</p>
+
 <div class="nb">
 <a id="packagediff"></a>
 <h2><a class="anchor" href="#packagediff">Cual es la diferencia entre estable &amp; inestable?</a></h2>
