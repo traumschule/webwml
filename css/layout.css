@@ -6,7 +6,6 @@
 body {
 	background: #fff;
 }
-
 #wrap {
 	width: 960px;
         max-width: 100%;
@@ -285,7 +284,6 @@ body {
 	float: right;
 	width: 230px;
 	margin-left: 20px;
-        -padding-top: 100px;
 }
 
 	#torusers { margin: 0 0 27px; }
@@ -1380,6 +1378,7 @@ p.blogDate {
     height 0.5s ease-in-out,
     box-shadow 0.1s linear;
 }
+
 .accordion input:active ~ article.ac-box
 .accordion input:checked ~ article.ac-box {
   -background: grey;
