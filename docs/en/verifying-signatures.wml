@@ -158,6 +158,7 @@
    <label for="ac-2-1"><a name="KeyWindows">&#9658; Windows</a></label>
    <label for="ac-2-2"><a name="KeyMacOS">&#9658; macOS</a></label>
    <label for="ac-2-3"><a name="KeyLinux">&#9658; Linux</a></label>
+   <label for="ac-2-4"><a name="KeyAndroid">&#9658; Android</a></label>
    </p>
 <!-- Windows -->
   <div>
@@ -228,6 +229,33 @@
     <p>
    </article>
   </div>
+<!-- Android -->
+  <div>
+   <input id="ac-2-4" name="accordion-2" type="radio" />
+   <article class="ac-os">
+    <h3>Import OpenPGP key on Android</h3>
+
+    <p>
+    To show the signature of your applications you need the app Checkey. It can
+    be installed from
+    <a href="https://f-droid.org/en/packages/info.guardianproject.checkey">​F-Droid</a>.
+
+    <p><!-- TODO copied from linux, needs to be rewritten -->
+    You need to have GnuPG installed before you can verify
+    signatures. It is probably already installed on your
+    system, as most Linux distributions come with it preinstalled.
+    </p>
+
+    <p>
+    The next step is to use GnuPG to import the key that signed
+    your package. The Tor Browser team signs Tor Browser releases. Import its
+    key (0x4E2C6E8793298290) by starting the terminal and typing:</p>
+    <pre>
+    $ gpg --keyserver pool.sks-keyservers.net --recv-keys 0x4E2C6E8793298290
+    </pre>
+    <p>
+   </article>
+  </div>
 <!-- all OS -->
   <div>
     <p>
@@ -272,6 +300,7 @@ sub   rsa4096/0xEB774491D9FF06E2 2018-05-26 [S] [expires: 2020-09-12]
    <label for="ac-3-1"><a name="VerifyWindows">&#9658; Windows</a></label>
    <label for="ac-3-2"><a name="VerifyMacOS">&#9658; macOS</a></label>
    <label for="ac-3-3"><a name="VerifyLinux">&#9658; Linux</a></label>
+   <label for="ac-3-3"><a name="VerifyAndroid">&#9658; Android</a></label>
    </p>
    <p>
    If you haven't already, <a href="<page download/download>">download</a>
@@ -380,6 +409,43 @@ Primary key fingerprint: EF6E 286D DA85 EA2A 4BA7  DE68 4E2C 6E87 9329 8290
 
   </article>
  </div>
+<!-- Android -->
+  <div>
+   <input id="ac-3-4" name="accordion-3" type="radio" />
+   <article class="ac-os">
+    <h3>Verify with OpenPGP signature on Android</h3>
+
+    <p>
+    To verify the signature of the package you downloaded, you will need
+    to download the ".asc" file as well. Assuming you downloaded the
+    package and its signature to your Downloads folder, run:
+    </p>
+
+    <pre>
+    $ jarsigner -verify -verbose -certs tor-browser-android-arm-<version-torbrowserbundleandroid>.apk
+    </pre>
+
+    <p>or using <a hef="https://developer.android.com/studio/command-line/apksigner">apksigner</a>:
+
+    <pre>
+    $ apksigner verify --print-certs tor-browser-android-arm-<version-torbrowserbundleandroid>.apk
+    </pre>
+
+    <p>The output should say "Good signature":</p>
+    <!-- TODO this is the output i got verifying the signature with gpg -->
+    <pre>
+gpg: assuming signed data in 'tor-browser-android-arm-1.0a1.apk'
+gpg: Signature made Thu 06 Sep 2018 08:38:27 PM CEST
+gpg:                using RSA key 0xEB774491D9FF06E2
+gpg: Good signature from "Tor Browser Developers (signing key) &lt;torbrowser@torproject.org&gt;" [unknown]
+gpg: WARNING: This key is not certified with a trusted signature!
+gpg:          There is no indication that the signature belongs to the owner.
+Primary key fingerprint: EF6E 286D DA85 EA2A 4BA7  DE68 4E2C 6E87 9329 8290
+     Subkey fingerprint: 1107 75B5 D101 FB36 BC6C  911B EB77 4491 D9FF 06E2
+    </pre>
+  </article>
+ </div>
+
 <!-- END OS specific sections -->
     <p>
     Currently valid subkey fingerprints are:
@@ -556,6 +622,17 @@ Primary key fingerprint: EF6E 286D DA85 EA2A 4BA7  DE68 4E2C 6E87 9329 8290
     </ul>
     </article>
    </div>
+<!-- Android -->
+  <div>
+   <input id="ac-4-4" name="accordion-4" type="radio" />
+   <article class="ac-os ac-4-4">
+    <h3>Verififcation with a checksum on Android</h3>
+
+    <p><!-- TODO -->This part needs to be written.
+    <a href="https://trac.torproject.org/projects/tor/ticket/27514">Please help!</a>
+    </p>
+   </article>
+  </div>
    <a class="nav" href="#TOC" title="go up">&uarr;</a>
   </article><!-- END ac-box -->
  </div><!-- END step 3 -->
