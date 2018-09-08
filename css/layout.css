@@ -677,6 +677,12 @@ table tr img {
 	width: 712px;
 	margin-bottom: 10px;
 	padding-bottom: 8px;
+        overflow: hidden;
+        float: left;
+        height: 0px;
+}
+.easy:active {
+        height: 100%;
 }
 
 #download-donate {
