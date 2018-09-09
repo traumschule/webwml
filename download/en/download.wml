@@ -30,13 +30,24 @@ you are used to. Please read the <a href="#warning">full list of warnings</a> fo
 	</p>
       </div>
 <!-- END TEASER WARNING -->
+
 <!-- START DOWNLOADS -->
+
+<!-- START TOR BROWSER -->
+ <h1>Download Tor Browser</h1>
+ <section id="torbrowser" class="accordion download">
+<!--
+  This section uses a CSS accordion to hide and show topics.
+  Styles are defined at the bottom of layout.css.
+-->
+
 <!-- START WINDOWS -->
-      <div id="windows" style="border-top: 0px;" class="accordionButton on">
-	<span class="windows24">Microsoft Windows</span>
-      </div>
-      <div class="accordionContent">
-	<div class="fauxhead"></div>
+ <div id="windows">
+   <input id="ac-0" name="accordion-0" type="checkbox" />
+   <label for="ac-0" class="windows24">
+    <h1><a name="windows">Microsoft Windows</a></h1>
+   </label>
+   <article class="ac-small">
 <!-- TOR BROWSER BUNDLE -->
 #<!-- NOTE - change language enabled button text at the top of this page -->
 	<div class="package" style="padding-top: 13px; border-top: 0px;">
@@ -70,13 +81,17 @@ you are used to. Please read the <a href="#warning">full list of warnings</a> fo
 	  <em>Windows 10, 8, 7, Vista, XP, 2000, 2003 Server, ME, and Windows 98SE</em>
 	  <p>Contains just Tor and nothing else. You'll need to configure Tor and all of your applications manually. This installer must be run as Administrator.</p>
 	</div>
-      </div>
+   </article>
+  </div>
 <!-- END WINDOWS -->
+
 <!-- START OS X -->
-      <div id="apple" class="accordionButton on">
-	<span class="mac24">Apple OS X</span></div>
-      <div class="accordionContent">
-	<div class="fauxhead"></div>
+ <div id="apple">
+   <input id="ac-1" name="accordion-1" type="checkbox" />
+   <label for="ac-1" class="mac24">
+    <h1><a name="apple">Mac OS X</a></h1>
+   </label>
+   <article class="ac-small">
 <!-- TOR BROWSER BUNDLE -->
 #<!-- NOTE - change language enabled button text at the top of this page -->
 	<div class="package" style="padding-top: 13px; border-top: 0px;">
@@ -91,18 +106,20 @@ you are used to. Please read the <a href="#warning">full list of warnings</a> fo
 	    </div>
 	    <a class="additional" href="<page projects/torbrowser>#downloads-alpha">Download Unstable</a><br />
 	  </form>
-
-	  <h2>Tor Browser</h2>
 	  <em>Version <version-torbrowserbundleosx64> (<releasedate-torbrowserbundleosx64>)- OS X Intel</em>
 	  <p>Everything you need to safely browse the Internet. This package requires no installation. Just extract it and run. <a href="<page projects/torbrowser>">Learn more &raquo;</a></p>
 	</div>
+   </article>
   </div>
- <!-- END OS X -->
- <!-- START UNIX -->
-      <div id="linux" class="accordionButton on">
-	<span class="linux24">Linux</span></div>
-      <div class="accordionContent">
-	<div class="fauxhead"></div>
+<!-- END OS X -->
+
+<!-- START UNIX -->
+ <div id="linux">
+   <input id="ac-2" name="accordion-0" type="checkbox" />
+   <label for="ac-2" class="linux24">
+    <h1><a name="linux">Linux</a></h1>
+   </label>
+   <article class="ac-small">
   <!-- TOR BROWSER BUNDLE -->
 #<!-- NOTE - change language enabled button text at the top of this page -->
 	<div class="package" style="padding-top: 13px; border-top: 0px;">
@@ -130,7 +147,6 @@ you are used to. Please read the <a href="#warning">full list of warnings</a> fo
 
 	  </form>
 
-	  <h2>Tor Browser</h2>
 	  <em>Version <version-torbrowserbundlelinux32> (<releasedate-torbrowserbundlelinux32>) - Linux, BSD, and Unix</em>
 	  <p>Everything you need to safely browse the Internet. This
 package requires no installation. Just extract it and run. <a
@@ -146,15 +162,18 @@ href="<page download/download-unix>">Tor repositories.</a>
 	  <p>Install the Tor components yourself, run a relay, create
 custom configurations. All an apt-get or yum install away.</p>
 	</div>
-	</div>
       </div>
+   </article>
+  </div>
 <!-- END UNIX -->
+
 <!-- START ANDROID -->
-      <div id="android" class="accordionButton on">
-        <span class="android24">Android</span>
-      </div>
-      <div class="accordionContent">
-        <div class="fauxhead"></div>
+ <div id="android">
+   <input id="ac-3" name="accordion-0" type="checkbox" />
+   <label for="ac-3" class="android24">
+    <h1><a name="android">Android</a></h1>
+   </label>
+   <article class="ac-small">
 	<div class="package" style="padding-top: 13px; border-top: 0px;">
           <form class="downloads">
             <a class="button" href="../dist/torbrowser/mobile/<version-torbrowserbundleandroid>/tor-browser-android-arm-<version-torbrowserbundleandroid>.apk"><span class="strong">Download</span><span class="normal">Android</span></a>
@@ -163,8 +182,6 @@ custom configurations. All an apt-get or yum install away.</p>
               <a class="siginfo" href="<page docs/verifying-signatures>">What's This?</a>
             </div>
           </form>
-
-	  <h2>Tor Browser</h2>
           <p>
           Introducing Tor Browser for Android, the mobile browser with the
           highest privacy protections ever available and on par with Tor
@@ -182,16 +199,19 @@ custom configurations. All an apt-get or yum install away.</p>
 	  the app. We plan on fixing it for the next release.
           </p>
        </div>
-     </div>
+   </article>
+  </div>
 <!-- END ANDROID -->
+
 <!-- START SMARTPHONES -->
+ <div id="smartphones">
+   <input id="ac-4" name="accordion-0" type="checkbox" />
+   <label for="ac-4" class="smartphone24">
+    <h1><a name="smartphones">Smartphones</a></h1>
+   </label>
+   <article class="ac-small">
 <!-- START IOS -->
-      <div id="smartphone" class="accordionButton on">
-	<span class="smartphone24">Smartphones</span></div>
-      <div class="accordionContent">
-	<div class="fauxhead"></div>
 	<div class="package" style="padding-top: 13px; border-top: 0px;">
-          <h2>iOS</h2>
           <p>
           Unfortunately we do not have the capacity to offer a version of
           Tor Browser for IOS at the moment, but
@@ -200,25 +220,35 @@ custom configurations. All an apt-get or yum install away.</p>
           <a href="https://prism-break.org/en/categories/ios">IOS | prism-break</a>.
           </p>
 	</div>
-      </div>
 <!-- END IOS -->
+   </article>
+  </div>
 <!-- END SMARTPHONES -->
+
 <!-- BEGIN SOURCE -->
-      <div id="source" class="accordionButton on">
-	<span class="sourcecode24">Source Code</span></div>
-      <div class="accordionContent">
-	<div class="fauxhead"></div>
+  <div id="source">
+   <input id="ac-5" name="accordion-0" type="checkbox" />
+   <label for="ac-5" class="source24">
+    <h1><a name="source">Source</a></h1>
+   </label>
+   <article class="ac-small">
 	<div class="package" style="padding-top: 13px; border-top: 0px; border-bottom: 1px solid #888888;">
           <p>Want to build <a href="<page download/tor>">Tor</a> or
           <a href="<page projects/torbrowser>">Tor Browser</a> from source?
           Read the <a href="https://trac.torproject.org/projects/tor/wiki/doc/TorBrowser/Hacking">
           Tor Browser Hacking Guide</a></p>
         </div>
-      </div>
-      <div class="expander"><a href="javascript:void(0)" class="switch">Expand All</a></div>
+   </article>
+  </div>
 <!-- END SOURCE -->
+<!-- TODO remove (hidden because js was removed)
+      <div class="expander"><a href="javascript:void(0)" class="switch">Expand All</a></div>
+-->
+</section>
+<!-- END TOR BROWSER -->
+
 <!-- END DOWNLOADS -->
-<br>
+<hr/>
 <!-- BEGIN WARNING -->
 #include <warning.wmi>
 <!-- END WARNING -->
