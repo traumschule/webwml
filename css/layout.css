@@ -816,14 +816,14 @@ table tr img {
     margin-bottom: 0px;
     }
 
-.warning {
+.note {
   float: left;
   _float: none;  /* Float works in all browsers but IE6 */
   padding: 25px 25px;
   margin-top: 4px;
   }
 
-  .warning p {
+  .note p {
     padding-left: 10px;
     }
 
@@ -1468,5 +1468,8 @@ p.blogDate {
   margin-left: 50px;
   padding-left: 50px;
 }
-
+.tor-source {
+  margin-left:75px;
+  float: left;
+}
 /* END ACCORDION */

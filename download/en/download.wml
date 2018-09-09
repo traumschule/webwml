@@ -149,17 +149,6 @@ you are used to. Please read the <a href="#warning">full list of warnings</a> fo
 	  <p>Everything you need to safely browse the Internet. This
 package requires no installation. Just extract it and run. <a
 href="<page projects/torbrowser>">Learn more &raquo;</a></p>
-<!-- repo packages -->
-	<div class="package" style="border-bottom: 0px;">
-	  <div class="downloads">
-	    <a class="additional" style="font-weight: bold;"
-href="<page download/download-unix>">Tor repositories.</a>
-	  </div>
-
-	  <h2>Tor (standalone)</h2>
-	  <p>Install the Tor components yourself, run a relay, create
-custom configurations. All an apt-get or yum install away.</p>
-	</div>
       </div>
    </article>
   </div>
@@ -231,9 +220,10 @@ custom configurations. All an apt-get or yum install away.</p>
    </label>
    <article class="ac-small">
 	<div class="package" style="padding-top: 13px; border-top: 0px; border-bottom: 1px solid #888888;">
-          <p>Want to build <a href="<page download/tor>">Tor</a> or
-          <a href="<page projects/torbrowser>">Tor Browser</a> from source?
-          Read the <a href="https://trac.torproject.org/projects/tor/wiki/doc/TorBrowser/Hacking">
+          <p>
+          To build <a href="<page projects/torbrowser>">Tor Browser</a>
+          from source see the
+          <a href="https://trac.torproject.org/projects/tor/wiki/doc/TorBrowser/Hacking">
           Tor Browser Hacking Guide</a></p>
         </div>
    </article>
@@ -245,7 +235,208 @@ custom configurations. All an apt-get or yum install away.</p>
 </section>
 <!-- END TOR BROWSER -->
 
+<!-- START TOR -->
+ <h1>Download Tor</h1>
+ <section id="tor" class="accordion download">
+<!-- START TOR PACKAGE -->
+  <div id="tor-packages">
+   <input id="ac-tor-packages" name="accordion-tor-packages" type="checkbox" />
+   <label for="ac-tor-packages" class="source24">
+    <h1><a name="tor-packages">Packages</a></h1>
+   </label>
+   <article class="ac-small">
+
+<table class="topforty">
+<thead>
+<tr bgcolor="#009933" style="color: white; ">
+  <th colspan="2">Platform</th>
+  <th>Download Stable</th>
+  <th>Download Unstable</th>
+  <th>Installation and Configuration</th>
+</tr>
+</thead>
+
+<tr>
+<td align="center"><img src="$(IMGROOT)/distros/debian.png" alt="Debian"> <img src="$(IMGROOT)/distros/ubuntu.png" alt="Ubuntu"> <img src="$(IMGROOT)/distros/knoppix.png" alt="Knoppix"></td>
+<td>Debian, Ubuntu, Knoppix</td>
+<td colspan="2"><a href="<page docs/debian>">repository packages</a> </td>
+<td> <a href="<page docs/tor-doc-unix>">Linux/BSD/Unix</a> </td>
+</tr>
+
+<tr class="beige">
+<td align="center"><img src="$(IMGROOT)/distros/centos.png" alt="CentOS"> <img src="$(IMGROOT)/distros/fedora.png" alt="Fedora"></td>
+<td>CentOS and Fedora</td>
+<td colspan="2">yum install tor / dnf install tor</td>
+<td> <a href="<page docs/tor-doc-unix>">Linux/BSD/Unix</a> </td>
+</tr>
+
+<tr>
+<td align="center"><img src="$(IMGROOT)/distros/gentoo.png" alt="Gentoo Linux"></td>
+<td>Gentoo Linux</td>
+<td colspan="2"><kbd>emerge tor</kbd></td>
+<td>
+<a href="<page docs/tor-doc-unix>">Linux/BSD/Unix</a><br>
+</td>
+</tr>
+
+<tr class="beige">
+<td align="center"><img height="40" src="$(IMGROOT)/distros/slackware.png" alt="Slackware"></td>
+<td>Slackware</td>
+<td colspan="2"><a href="https://slackbuilds.org/repository/14.2/network/tor/">SlackBuilds.org</a></td>
+<td>
+<a href="<page docs/tor-doc-unix>">Linux/BSD/Unix</a><br>
+</td>
+</tr>
+
+<tr>
+<td align="center"><img src="$(IMGROOT)/distros/freebsd.png" alt="FreeBSD"></td>
+<td>FreeBSD</td>
+<td colspan="2"><kbd>pkg install tor</kbd></td>
+<td><a href="<page docs/tor-doc-unix>">Linux/BSD/Unix</a></td>
+</tr>
+
+<tr class="beige">
+<td align="center"><img src="$(IMGROOT)/distros/openbsd.png" alt="OpenBSD"></td>
+<td>OpenBSD</td>
+<td colspan="2"><kbd>pkg_add tor</kbd></td>
+<td>
+<a href="<page docs/tor-doc-unix>">Linux/BSD/Unix</a><br>
+<a href="<wiki>doc/OpenbsdChrootedTor">Guide to chrooting Tor in OpenBSD</a>
+</td>
+</tr>
+
+<tr>
+<td align="center"><img src="$(IMGROOT)/distros/netbsd.png" alt="NetBSD"></td>
+<td>NetBSD</td>
+<td colspan="2"><kbd>cd /usr/pkgsrc/net/tor &amp;&amp; make install</kbd></td>
+<td><a href="<page docs/tor-doc-unix>">Linux/BSD/Unix</a></td>
+</tr>
+
+<tr class="beige">
+<td align="center"><img src="$(IMGROOT)/distros/terminal.png" alt="Source code"></td>
+<td>Source tarballs</td>
+<td>
+<a href="<package-source-stable>"><version-stable></a>
+ (<a href="<package-source-stable>.asc">sig</a>)
+</td>
+<td>
+<a href="<package-source-alpha>"><version-alpha></a>
+ (<a href="<package-source-alpha>.asc">sig</a>)
+</td>
+<td><kbd>./configure &amp;&amp; make &amp;&amp; src/or/tor</kbd> (or src/app/tor starting in 0.3.5.x)</td>
+</tr>
+
+</table>
+   </article>
+  </div>
+<!-- END TOR PACKAGE -->
+<!-- START TOR SOURCE -->
+  <div id="tor-source">
+   <input id="ac-tor-source" name="accordion-tor-source" type="checkbox" />
+   <label for="ac-tor-source" class="source24">
+    <h1><a name="tor-source">Source Tarballs</a></h1>
+   </label>
+   <article class="ac">
+           <p style="text-align:center">Build and run with: <code style="color: #666666;">./configure &amp;&amp; make &amp;&amp; src/or/tor</code> (or src/app/tor starting in 0.3.5.x)<br/>
+             See the <a href="<gitblob>ChangeLog">Changelog</a> for what's new.</p>
+           <div id="stable" style="margin-left:75px; float: left;">
+            <h2 style="text-align: center">Stable</h2>
+	    <a class="button" href="../dist/tor-<version-stable>.tar.gz"><span class="strong">Stable</span><span class="normal">Version <version-stable></span></a>
+	    <div class="sig">
+              <p>
+	      <a href="<gitblob>ReleaseNotes<cgitstable>">Release notes</a> &#x2012; <a href="../dist/tor-<version-stable>.tar.gz.asc">signature</a> &#x2012; <a class="siginfo" href="<page docs/verifying-signatures>">What's This?</a>
+              </p>
+	    </div>
+	    <a class="button" href="../dist/tor-<version-oldstable>.tar.gz"><span class="strong">Oldstable</span><span class="normal">Version <version-oldstable></span></a>
+	    <div class="sig">
+              <p>
+              <a href="<gitblob>ReleaseNotes<cgitoldstable>">Release notes</a> &#x2012; <a href="../dist/tor-<version-oldstable>.tar.gz.asc">signature</a> &#x2012; <a class="siginfo" href="<page docs/verifying-signatures>">What's This?</a>
+              </p>
+	    </div>
+           </div>
+           <div id="unstable" class="tor-source">
+            <h2 style="text-align: center">Unstable</h2>
+	    <a class="button" href="../dist/tor-<version-testing>.tar.gz"><span class="strong">Unstable</span><span class="normal">Version <version-testing></span></a>
+	    <div class="sig">
+	      <a href="../dist/tor-<version-testing>.tar.gz.asc">signature</a> &#x2012; <a class="siginfo" href="<page docs/verifying-signatures>">What's This?</a>
+	    </div>
+	    <a class="button" href="../dist/tor-<version-beta>.tar.gz"><span class="strong">Unstable</span><span class="normal">Version <version-beta></span></a>
+	    <div class="sig">
+	      <a href="../dist/tor-<version-beta>.tar.gz.asc">signature</a> &#x2012; <a class="siginfo" href="<page docs/verifying-signatures>">What's This?</a>
+	    </div>
+	    <a class="button" href="../dist/tor-<version-alpha>.tar.gz"><span class="strong">Unstable</span><span class="normal">Version <version-alpha></span></a>
+	    <div class="sig">
+	      <a href="../dist/tor-<version-alpha>.tar.gz.asc">signature</a> &#x2012; <a class="siginfo" href="<page docs/verifying-signatures>">What's This?</a>
+	    </div>
+   </article>
+   <div class="note">
+    <p>
+    <a id="ChangeLog"></a><a id="Stable"></a><a id="Testing"></a>
+    For a list of what has changed in each stable Tor release, see the
+    <a href="<gitblob>ReleaseNotes<cgitstable>">ReleaseNotes</a>. For a list of
+    changes in both stable and development versions, see the
+    <a href="<gitblob>ChangeLog">ChangeLog</a>.
+    </p>
+   </div>
+<!-- END TOR SOURCE -->
+</div>
+<!-- END TOR -->
+
 <!-- END DOWNLOADS -->
+<hr/>
+<!-- START NOTES-->
+<div class="note">
+<h2>License</h2>
+<p>
+Tor is distributed as <a href="http://www.fsf.org/">Free Software</a>
+under the <a href="<gitblob>LICENSE">3-clause BSD license</a>.
+</p>
+<p>
+There is no fee for installing Tor, or using the Tor network, but
+if you want Tor to become faster and more usable please consider
+<a href="<page donate/donate-download>">making a tax-deductible donation to The Tor Project</a>.
+</p>
+</div>
+
+<div class="note">
+<a id="packagediff"></a>
+<h2><a class="anchor" href="#packagediff">What's the difference between Stable &amp; Unstable?</a></h2>
+
+<p>
+Stable packages are released when we believe the features and code will
+not change for many months.
+</p>
+<p>
+Unstable packages are released so you can help us test new features and bugfixes. Even though they have a higher version number
+than the stable versions listed above, there is a much higher chance of
+serious reliability and security bugs in these downloads.  Please be prepared to <a href="https://bugs.torproject.org/">report bugs</a>.
+</p>
+</div>
+
+<hr/>
+
+<div class="note">
+<h2>Security updates and alternative download options</h2>
+<p>
+To keep informed of security advisories and new stable releases, subscribe
+to the <a href="https://lists.torproject.org/cgi-bin/mailman/listinfo/tor-announce">tor-announce
+mailing list</a> (you will be asked to confirm via email). You can also
+<a href="http://rss.gmane.org/gmane.network.onion-routing.announce">watch
+the list's RSS feed</a>.
+</p>
+
+<p>
+If you would like to research any past release of Tor source, packages,
+or other binaries, see <a href="https://archive.torproject.org/">the
+archive</a>.
+</p>
+
+<p>
+If you have trouble downloading Tor from this site, here is a <a
+href="<page getinvolved/mirrors>">list of sites mirroring the Tor site</a>.
+</p>
+</div>
+<!-- END NOTES -->
 <hr/>
 <!-- BEGIN WARNING -->
 #include <warning.wmi>

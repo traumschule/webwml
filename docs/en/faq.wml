@@ -1408,7 +1408,7 @@
 
     <p>
     First (best option), if you're on Linux, you can install the
-    <a href="<page download/download-unix>">system Tor package</a>
+    <a href="<page download/download>#tor-package">system Tor package</a>
     (e.g. apt-get install tor) and then set it up to be a relay
     (<a href="https://www.torproject.org/docs/tor-relay-debian">instructions</a>).
     You can then use TBB independent of that.
