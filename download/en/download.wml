@@ -40,7 +40,9 @@ you are used to. Please read the <a href="#warning">full list of warnings</a> fo
   This section uses a CSS accordion to hide and show topics.
   Styles are defined at the bottom of layout.css.
 -->
-
+<p>Everything you need to safely browse the Internet. <a href="<page projects/torbrowser>">Learn more &raquo;</a><br/>
+<a href="https://blog.torproject.org/category/tags/tbb">Read the release announcements!</a></p>
+<p><a class="additional" href="#torbrowser-alpha">Download Unstable</a></p>
 <!-- START WINDOWS -->
  <div id="windows">
    <input id="ac-0" name="accordion-0" type="checkbox" />
@@ -48,9 +50,32 @@ you are used to. Please read the <a href="#warning">full list of warnings</a> fo
     <h1><a name="windows">Microsoft Windows</a></h1>
    </label>
    <article class="ac-small">
-<!-- TOR BROWSER BUNDLE -->
-#<!-- NOTE - change language enabled button text at the top of this page -->
-	<div class="package" style="padding-top: 13px; border-top: 0px;">
+<!-- WINDOWS 64 Bit -->
+     <div class="package">
+	  <div class="desc">
+	    <h2>64 Bit</h2>
+	    <em>Version <version-torbrowserbundle> - Windows 10, 8, and 7</em>
+	  </div>
+	  <form class="downloads">
+	    <a class="button win-tbb64" href="../dist/torbrowser/<version-torbrowserbundle>/torbrowser-install-win64-<version-torbrowserbundle>_<lang>.exe">
+            <span class="strong">Download</span><span class="normal"><button-win-tbb64></span></a>
+	    <select name="language" id="win-tbb64" class="lang">
+#include <lang.wmi>
+	    </select>
+	    <div class="sig">
+	      <a class="lang-alt" href="<page projects/torbrowser>#downloads">
+              Other Languages</a>
+	      (<a class="win-tbb64-sig" href="../dist/torbrowser/<version-torbrowserbundle>/torbrowser-install-win64-<version-torbrowserbundle>_<lang>.exe.asc">
+              sig</a>) <a class="siginfo" href="<page docs/verifying-signatures>">What's This?</a>
+	    </div>
+	  </form>
+    </div>
+<!-- WINDOWS 32-Bit -->
+    <div class="package">
+	  <div class="desc">
+	    <h2>32 Bit</h2>
+	    <em>Version <version-torbrowserbundle> - Windows 10, 8, and 7</em>
+	  </div>
 	  <form class="downloads">
 	    <a class="button win-tbb" href="../dist/torbrowser/<version-torbrowserbundle>/torbrowser-install-<version-torbrowserbundle>_<lang>.exe"><span class="strong">Download</span><span class="normal"><button-win-tbb32></span></a>
 	    <select name="language" id="win-tbb" class="lang">
@@ -58,41 +83,48 @@ you are used to. Please read the <a href="#warning">full list of warnings</a> fo
 	    </select>
 	    <div class="sig">
 	      <a class="lang-alt" href="<page projects/torbrowser>#downloads">Other Languages</a>
-	      (<a class="win-tbb-sig" href="../dist/torbrowser/<version-torbrowserbundle>/torbrowser-install-<version-torbrowserbundle>_<lang>.exe.asc">sig</a>) <a class="siginfo" href="<page docs/verifying-signatures>">What's This?</a>
+	      (<a class="win-tbb-sig" href="../dist/torbrowser/<version-torbrowserbundle>/torbrowser-install-<version-torbrowserbundle>_<lang>.exe.asc">
+              sig</a>) <a class="siginfo" href="<page docs/verifying-signatures>">What's This?</a>
 	    </div>
-	    <a class="additional" href="<page projects/torbrowser>#downloads-alpha">Download Unstable</a><br />
-<!--	    <a class="additional" href="../dist/torbrowser/<version-torbrowserbundlealpha>/tor-browser-<version-torbrowserbundlealpha>_en-US.exe">Download Unstable</a> (<a href="../dist/torbrowser/<version-torbrowserbundlealpha>/tor-browser-<version-torbrowserbundlealpha>_en-US.exe.asc">sig</a>)-->
 	  </form>
-	  <em>Version <version-torbrowserbundle> (<releasedate-torbrowserbundle>) - Windows 10, 8, 7, Vista, and XP</em>
-	  <p>Everything you need to safely browse the Internet. <a href="<page projects/torbrowser>">Learn more &raquo;</a></p>
-	</div>
-<!-- EXPERT BUNDLE -->
-	<div class="package">
+        </div>
+<!-- WINDOWS EXPPERT BUNDLE -->
+    <div class="package">
+	  <div class="desc">
+	    <h2>Expert Bundle</h2>
+	    <em>Version <version-torbrowserbundle> - Windows 10, 8, 7, Vista,
+                XP, 2000, 2003 Server, ME, and Windows 98SE</em>
+	  </div>
 	  <div class="downloads">
-	    <a class="button" href="<package-win32-stable>"><span class="strong">Download</span><span class="normal">Expert Bundle</span></a>
+	    <a class="button" href="<package-win32-stable>"><span class="strong">
+            Download</span><span class="normal">Expert Bundle</span></a>
 	    <div class="sig">
-	      (<a href="<package-win32-stable>.asc">sig</a>) <a class="siginfo" href="<page docs/verifying-signatures>">What's This?</a>
+	      (<a href="<package-win32-stable>.asc">sig</a>)
+             <a class="siginfo" href="<page docs/verifying-signatures>">What's This?</a>
 	    </div>
 	  </div>
-
-	  <h2>Expert Bundle</h2>
-	  <em>Windows 10, 8, 7, Vista, XP, 2000, 2003 Server, ME, and Windows 98SE</em>
-	  <p>Contains just Tor and nothing else. You'll need to configure Tor and all of your applications manually. This installer must be run as Administrator.</p>
-	</div>
+	  <p>
+          Contains just Tor and nothing else. You'll need to configure Tor and
+          all of your applications manually. This installer must be run as
+          Administrator.
+          </p>
+     </div>
    </article>
   </div>
 <!-- END WINDOWS -->
 
 <!-- START OS X -->
  <div id="apple">
-   <input id="ac-1" name="accordion-1" type="checkbox" />
-   <label for="ac-1" class="mac24">
-    <h1><a name="apple">Mac OS X</a></h1>
+   <input id="ac-mac" name="accordion-mac" type="checkbox" />
+   <label for="ac-mac" class="mac24">
+    <h1><a name="mac">Mac OS X</a></h1>
    </label>
-   <article class="ac-small">
-<!-- TOR BROWSER BUNDLE -->
-#<!-- NOTE - change language enabled button text at the top of this page -->
-	<div class="package" style="padding-top: 13px; border-top: 0px;">
+   <article id="osx" class="ac-small">
+	<div class="package">
+	  <div class="desc">
+            <h2>Tor Browser Bundle</h2>
+	    <em>Version <version-torbrowserbundleosx64> - OS X (10.9+)</em> 
+	  </div>
 	  <form class="downloads">
 	    <a class="button osx-tbb" href="../dist/torbrowser/<version-torbrowserbundleosx64>/TorBrowser-<version-torbrowserbundleosx64>-osx64_<lang>.dmg"><span class="strong">Download</span><span class="normal"><button-osx-tbb64></span></a>
 	    <select name="language" id="osx-tbb" class="lang">
@@ -102,58 +134,83 @@ you are used to. Please read the <a href="#warning">full list of warnings</a> fo
 	      <a class="lang-alt" href="<page projects/torbrowser>#downloads">Other Languages</a>
 	      (<a class="osx-tbb-sig" href="../dist/torbrowser/<version-torbrowserbundleosx64>/TorBrowser-<version-torbrowserbundleosx64>-osx64_<lang>.dmg.asc">sig</a>) <a class="siginfo" href="<page docs/verifying-signatures>">What's This?</a>
 	    </div>
-	    <a class="additional" href="<page projects/torbrowser>#downloads-alpha">Download Unstable</a><br />
 	  </form>
-	  <em>Version <version-torbrowserbundleosx64> (<releasedate-torbrowserbundleosx64>)- OS X Intel</em>
-	  <p>Everything you need to safely browse the Internet. This package requires no installation. Just extract it and run. <a href="<page projects/torbrowser>">Learn more &raquo;</a></p>
-	</div>
+      </div>
    </article>
   </div>
 <!-- END OS X -->
 
 <!-- START UNIX -->
- <div id="linux">
+ <div id="unix">
    <input id="ac-2" name="accordion-0" type="checkbox" />
    <label for="ac-2" class="linux24">
     <h1><a name="linux">Linux</a></h1>
    </label>
    <article class="ac-small">
-  <!-- TOR BROWSER BUNDLE -->
-#<!-- NOTE - change language enabled button text at the top of this page -->
-	<div class="package" style="padding-top: 13px; border-top: 0px;">
+<!-- LINUX 64 Bit -->
+	<div class="package" >
+	  <div class="desc">
+	    <h2>64 Bit</h2>
+	    <em>Version <version-torbrowserbundlelinux64> - Linux, BSD, and Unix<</em>
+	  </div>
 	  <form class="downloads">
 	    <a class="button lin-tbb64" href="../dist/torbrowser/<version-torbrowserbundlelinux64>/tor-browser-linux64-<version-torbrowserbundlelinux64>_<lang>.tar.xz"><span class="strong">Download</span><span class="normal"><button-lin-tbb64></span></a>
 	    <select name="language" id="lin-tbb64" class="lang">
 #include <lang.wmi>
 	    </select>
-	    <div class="sig">
+	    <div class="sig" style="margin-bottom: 5px;">
 	      <a class="lang-alt" href="<page projects/torbrowser>#downloads">Other Languages</a>
 	      (<a class="lin-tbb64-sig" href="../dist/torbrowser/<version-torbrowserbundlelinux64>/tor-browser-linux64-<version-torbrowserbundlelinux64>_<lang>.tar.xz.asc">sig</a>) <a class="siginfo" href="<page docs/verifying-signatures>">What's This?</a>
 	    </div>
-	    <a class="additional" href="<page projects/torbrowser>#downloads-alpha">Download Unstable</a><br />
-<!--	    <a class="additional" href="../dist/torbrowser/<version-torbrowserbundlelinux64alpha>/tor-browser-gnu-linux-x86_64-<version-torbrowserbundlelinux64alpha>-dev-en-US.tar.gz">Download Unstable</a> (<a href="../dist/torbrowser/<version-torbrowserbundlelinux64alpha>/tor-browser-gnu-linux-x86_64-<version-torbrowserbundlelinux64alpha>-dev-en-US.tar.gz.asc">sig</a>)-->
-
+	  </form>
+      </div>
+<!-- LINUX 32 Bit -->
+	<div class="package" style="padding-top: 13px; border-top: 0px;">
+	  <div class="desc">
+	    <h2>32-Bit</h2>
+	    <em>Version <version-torbrowserbundlelinux32> - Linux, BSD, and Unix<</em>
+	  </div>
+	  <form class="downloads">
 	    <a class="button lin-tbb32" href="../dist/torbrowser/<version-torbrowserbundlelinux32>/tor-browser-linux32-<version-torbrowserbundlelinux32>_<lang>.tar.xz"><span class="strong">Download</span><span class="normal"><button-lin-tbb32></span></a>
 	    <select name="language" id="lin-tbb32" class="lang">
 #include <lang.wmi>
 	    </select>
-	    <div class="sig">
+	    <div class="sig" style="margin-bottom: 5px;">
 	      <a class="lang-alt" href="<page projects/torbrowser>#downloads">Other Languages</a>
 	      (<a class="lin-tbb32-sig" href="../dist/torbrowser/<version-torbrowserbundlelinux32>/tor-browser-linux32-<version-torbrowserbundlelinux32>_<lang>.tar.xz.asc">sig</a>) <a class="siginfo" href="<page docs/verifying-signatures>">What's This?</a>
 	    </div>
-<!--	    <a class="additional" href="../dist/torbrowser/<version-torbrowserbundlelinux32alpha>/tor-browser-gnu-linux-i686-<version-torbrowserbundlelinux32alpha>-dev-en-US.tar.gz">Download Unstable</a> (<a href="../dist/torbrowser/<version-torbrowserbundlelinux32alpha>/tor-browser-gnu-linux-i686-<version-torbrowserbundlelinux32alpha>-dev-en-US.tar.gz.asc">sig</a>)<p>-->
-
 	  </form>
-
-	  <em>Version <version-torbrowserbundlelinux32> (<releasedate-torbrowserbundlelinux32>) - Linux, BSD, and Unix</em>
-	  <p>Everything you need to safely browse the Internet. This
-package requires no installation. Just extract it and run. <a
-href="<page projects/torbrowser>">Learn more &raquo;</a></p>
       </div>
    </article>
   </div>
 <!-- END UNIX -->
+<!-- START OPENBSD -->
+ <div id="bsd">
+   <input id="ac-bsd" name="accordion-bsd" type="checkbox" />
+   <label for="ac-bsd" class="openbsd24">
+    <h1><a name="openbsd">OpenBSD</a></h1>
+   </label>
+   <article id="openbsd" class="ac-small">
+      <div class="desc">
+	<p>
+        To install Tor Browser on OpenBSD, run:</p>
+        <pre>pkg_add tor-browser</pre>
 
+	<p>
+        Sometimes the most recent version of Tor Browser on OpenBSD is
+        behind the current release.<br/>
+        The available version of TB on OpenBSD should be checked with:
+        </p>
+	<pre>pkg_info -Q tor-browser</pre>
+	<p>
+        If provided version is not the current Tor Browser version, it is
+        not recommended. To install the Tor Browser port from an updated ports
+        tree, run:</p>
+        <pre>cd /usr/ports/meta/tor-browser && make install</pre>
+      </div>
+   </article>
+  </div>
+<!-- END OPENBSD -->
 <!-- START ANDROID -->
  <div id="android">
    <input id="ac-3" name="accordion-0" type="checkbox" />
@@ -161,7 +218,34 @@ href="<page projects/torbrowser>">Learn more &raquo;</a></p>
     <h1><a name="android">Android</a></h1>
    </label>
    <article class="ac-small">
-	<div class="package" style="padding-top: 13px; border-top: 0px;">
+	<div class="package">
+	  <div class="desc">
+	    <h2>Stable</h2>
+	    <!--<em>Version <version-torbrowserbundleandroid> - Android</em>-->
+	  </div>
+          <p>
+          Tor Browser for Android has no stable version yet.
+          It is expected for early 2019
+          </p>
+          <p>
+          You can help by testing the Alpha version and
+          <a href="https://trac.torproject.org/projects/tor/wiki/doc/community/HowToReportBugFeedback">reporting issues</a>.
+          </p>
+        </div>
+  	<div class="package">
+          <h2>Alpha</h2>
+          <p>
+          Introducing Tor Browser for Android, the mobile browser with the
+          highest privacy protections ever available and on par with Tor
+          Browser for desktop.
+          </p>
+          <p>
+          Note: For this release, you also need to install
+          <a href="https://www.torproject.org/docs/android.html.en">Orbot</a>.
+          </p>
+	  <div class="desc">
+	    <em>Version <version-torbrowserbundleandroid> - Android</em> <a href="https://blog.torproject.org/category/tags/mobile">Read the release announcements!</a></p>
+	  </div>
           <form class="downloads">
             <a class="button" href="../dist/torbrowser/mobile/<version-torbrowserbundleandroid>/tor-browser-android-arm-<version-torbrowserbundleandroid>.apk"><span class="strong">Download</span><span class="normal">Android</span></a>
             <div class="sig">
@@ -170,20 +254,13 @@ href="<page projects/torbrowser>">Learn more &raquo;</a></p>
             </div>
           </form>
           <p>
-          Introducing Tor Browser for Android, the mobile browser with the
-          highest privacy protections ever available and on par with Tor
-          Browser for desktop. You can download the alpha release on
-          <a href="https://play.google.com/store/apps/details?id=org.torproject.torbrowser_alpha">GooglePlay</a>,
-          or you can get the apk by clicking on the button below.
-          </p>
-          <p>
-          Note: For this release, <b>you also need to install Orbot</b>, you can
-          learn more about it <a href="https://guardianproject.info/apps/orbot">here</a>.
-          </p>
-          <p>
           Known issue: Our Security Slider is now under ‘Security Settings,
           but because of a small issue, it’s only showing up after you restart
-	  the app. We plan on fixing it for the next release.
+          the app. We plan on fixing it for the next release.
+          </p>
+          <p>Also available on
+          <a href="https://play.google.com/store/apps/details?id=org.torproject.android">GooglePlay</a>.
+          <!--and <a href="https://guardianproject.info/fdroid/">FDroid</a>-->
           </p>
        </div>
    </article>
@@ -191,22 +268,27 @@ href="<page projects/torbrowser>">Learn more &raquo;</a></p>
 <!-- END ANDROID -->
 
 <!-- START SMARTPHONES -->
- <div id="smartphones">
+ <div id="smartphone">
    <input id="ac-4" name="accordion-0" type="checkbox" />
    <label for="ac-4" class="smartphone24">
-    <h1><a name="smartphones">Smartphones</a></h1>
+    <h1><a name="smartphone">Smartphones</a></h1>
    </label>
    <article class="ac-small">
 <!-- START IOS -->
-	<div class="package" style="padding-top: 13px; border-top: 0px;">
-          <p>
-          Unfortunately we do not have the capacity to offer a version of
-          Tor Browser for IOS at the moment, but
-          <a href="https://support.torproject.org/#tormobile-3">
-          we recommend Onion Browser</a>. See also
-          <a href="https://prism-break.org/en/categories/ios">IOS | prism-break</a>.
-          </p>
-	</div>
+     <div class="package">
+       <div class="desc">
+         <h2>iOS</h2>
+	 <!--<em>Version <version-torbrowserbundleios> - iOS</em>-->
+       </div>
+       <p>
+       Unfortunately we do not have the capacity to offer a version of
+       Tor Browser for IOS at the moment, but
+       <a href="https://support.torproject.org/#tormobile-3">
+       we recommend Onion Browser</a>. Check
+       <a href="https://prism-break.org/en/categories/ios">prism-break</a>
+       for security limitations of iOS.
+       </p>
+     </div>
 <!-- END IOS -->
    </article>
   </div>
@@ -228,10 +310,6 @@ href="<page projects/torbrowser>">Learn more &raquo;</a></p>
         </div>
    </article>
   </div>
-<!-- END SOURCE -->
-<!-- TODO remove (hidden because js was removed)
-      <div class="expander"><a href="javascript:void(0)" class="switch">Expand All</a></div>
--->
 </section>
 <!-- END TOR BROWSER -->
 
@@ -385,7 +463,7 @@ href="<page projects/torbrowser>">Learn more &raquo;</a></p>
 <!-- END DOWNLOADS -->
 <hr/>
 <!-- START NOTES-->
-<div class="note">
+<div id="license" class="note">
 <h2>License</h2>
 <p>
 Tor is distributed as <a href="http://www.fsf.org/">Free Software</a>
@@ -409,13 +487,13 @@ not change for many months.
 <p>
 Unstable packages are released so you can help us test new features and bugfixes. Even though they have a higher version number
 than the stable versions listed above, there is a much higher chance of
-serious reliability and security bugs in these downloads.  Please be prepared to <a href="https://bugs.torproject.org/">report bugs</a>.
+serious reliability and security bugs in these downloads.  Please be prepared to <a href="https://trac.torproject.org/projects/tor/wiki/doc/community/HowToReportBugFeedback">report bugs</a>.
 </p>
 </div>
 
 <hr/>
 
-<div class="note">
+<div id="other" class="note">
 <h2>Security updates and alternative download options</h2>
 <p>
 To keep informed of security advisories and new stable releases, subscribe
@@ -448,15 +526,15 @@ href="<page getinvolved/mirrors>">list of sites mirroring the Tor site</a>.
  <div class="img-shadow sidenav-ez">
   <div class="sidenav-sub">
    <ul>
-    <li class="dropdown"><a href="<page
-download/download>#windows">Microsoft Windows</a></li>
-    <li class="dropdown"><a href="<page download/download>#apple">Apple OS X</a></li>
-    <li class="dropdown"><a href="<page download/download>#linux">Linux/Unix</a></li>
-    <li class="dropdown"><a href="<page download/download>#openbsd">OpenBSD</a></li>
+    <li class="dropdown"><a href="#windows">Microsoft Windows</a></li>
+    <li class="dropdown"><a href="#apple">Apple OS X</a></li>
+    <li class="dropdown"><a href="#linux">Linux/Unix</a></li>
+    <li class="dropdown"><a href="#openbsd">OpenBSD</a></li>
     <li class="dropdown"><a href="#android">Android</a></li>
-    <li class="dropdown"><a href="<page download/download>#smartphone">Smartphones</a></li>
-    <li class="dropdown"><a href="<page download/download>#source">Source
-Code</a></li>
+    <li class="dropdown"><a href="#smartphone">Smartphones</a></li>
+    <li class="dropdown"><a href="#source">Source</a></li>
+    <li class="dropdown"><a href="#license">License</a></li>
+    <li class="dropdown"><a href="#other">Mirrors</a></li>
    </ul>
   </div>
  </div>
@@ -468,7 +546,11 @@ Code</a></li>
   <div class="sidenav-sub">
    <h2>Having Trouble?</h2>
    <ul>
+    <li class="dropdown"><a href="#warning">Check the warnings</a></li>
     <li class="dropdown"><a href="<page docs/documentation>">Read the fine manuals</a></li>
+    <li class="dropdown"><a href="<page about/contact>#irc>">Get Support on IRC</a></li>
+    <li class="dropdown"><a href="https://trac.torproject.org/projects/tor/wiki/doc/community/HowToReportBugFeedback">Report Bugs</a></li>
+    <li class="dropdown"><a href="#other">Subscribe for Announcements</a></li>
    </ul>
   </div>
  </div>
