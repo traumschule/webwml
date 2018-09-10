@@ -813,7 +813,7 @@
     it sends. Tor Browser tries to keep application-level data,
     like the user-agent string, uniform for all users. Tor Browser can't
     do anything about text that you type into forms, though. <a
-    href="<page download/download-easy>#warning">Be
+    href="<page download/download>#warning">Be
     careful and be smart.</a>
     </p>
 

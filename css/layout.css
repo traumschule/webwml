@@ -604,11 +604,12 @@ table tr img {
   }
 
 .package {
+  display: block;
   float: left;
-  height: 280px;
+  width: 238px;
   margin: 0px;
   padding: 25px 20px 20px 20px;
-  border-top: 1px solid #888888;
+  -border-top: 1px solid #888888;
   }
 
   .package h2 {
@@ -621,9 +622,6 @@ table tr img {
     }
 
 .downloads {
-  display: block;
-  float: left;
-  width: 238px;
   padding: 0 16px 0 0;
   text-align: center;
   }
@@ -673,15 +671,10 @@ table tr img {
 .sig {
   display: block;
   margin: 3px 0px 20px 0px;
+  margin-bottom: 5px
   }
 
 /* DOWNLOAD-EASY ---*/
-
-.easy {
-	width: 712px;
-	margin-bottom: 10px;
-	padding-bottom: 8px;
-}
 
 #download-donate {
 	background-attachment: scroll;
@@ -694,31 +687,31 @@ table tr img {
 	background-size: 100% 100%;
 }
 
-.easy .package h2,
-.easy .package em {
+.package h2,
+.package em {
   display: block;
   width: 100%;
   text-align: left;
   }
 
-.easy .package h2 {
+.package h2 {
   padding-top: 10px;
   padding-bottom: 5px;
   }
 
-.easy .package em {
+.package em {
   font-size: 1.2em;
   padding-top: 8px;
   padding-bottom: 4px;
   }
 
-.easy .package p {
+.package p {
   padding-left: 0px;
   font-size: 15px;
   text-align: justify;
   }
 
-.easy .package p.alt-dl {
+.package p.alt-dl {
   text-align: left;
   text-indent: 0px;
   padding-left: 0px;
@@ -740,11 +733,6 @@ table tr img {
 .all-dl a:hover{
   text-decoration: underline;
 }
-
-.easy .package {
-  float: none;
-  padding: 0 8px 0 12px ;
-  }
 
 .open {
   display: block;
