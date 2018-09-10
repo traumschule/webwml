@@ -482,7 +482,7 @@ table tr img {
 	width: auto;
 }
 
-/* DL PAGE ------------*/
+/* DOWNLOAD ------------*/
 
 .windows24 {
  /* Open Icon Library - Webpage Icons Package
@@ -560,71 +560,15 @@ table tr img {
   width: 680px;
   }
 
-  .accordionButton:hover {
-    background: url("../images/table-title-hover.jpg") repeat-x left bottom #885CA4;
-    text-shadow: 1px 1px 0px rgba(17, 17, 17, 1);
-    }
-
-.on:before,
-.off:before {
-  position: absolute;
-  content: '';
-  height: 0px;
-  width: 0px;
-  font-size:0px;
-  line-height:0px;
-  }
-
-.on:before {
-  top: 14px;
-  left: 10px;
-  border-left:7px solid transparent;
-  border-right:7px solid transparent;
-  border-top:7px solid #FFFFFF;
-  }
-
-.off:before {
-  top: 9px;
-  left: 14px;
-  border-bottom:7px solid transparent;  /* left arrow slant */
-  border-top:7px solid transparent; /* right arrow slant */
-  border-left:7px solid #FFFFFF; /* bottom, add background color here */
-  }
-
-  .accordionContent {
-  width: 708px;
-  float: left;
-  _float: none;  /* Float works in all browsers but IE6 */
-  background: #FFFFFF;
-  display: block;
-  }
-
-.accordionContent .fauxhead {
-  width: 710px;
-  }
-
-.package {
-  display: block;
-  float: left;
-  width: 238px;
-  margin: 0px;
-  padding: 25px 20px 20px 20px;
-  -border-top: 1px solid #888888;
-  }
-
-  .package h2 {
-    margin-bottom: 3px;
-    }
-
-  .package p {
-    margin-top: 16px;
-    padding-left: 10px;
-    }
+.accordionButton:hover {
+  background: url("../images/table-title-hover.jpg") repeat-x left bottom #885CA4;
+  text-shadow: 1px 1px 0px rgba(17, 17, 17, 1);
+}
 
 .downloads {
   padding: 0 16px 0 0;
   text-align: center;
-  }
+}
 
 .lang {
   float: right;
@@ -642,7 +586,7 @@ table tr img {
   -moz-border-radius-bottomright: 5px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  }
+}
 
 .button {
   text-align: center;
@@ -656,25 +600,23 @@ table tr img {
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   border-radius: 7px;
-  }
+}
 
 .button .strong {
   display: block;
   padding: 10px 0 0 57px;
-  }
+}
 
 .button .normal {
   padding: 5px 0 0 57px;
   display: block;
-  }
+}
 
 .sig {
   display: block;
   margin: 3px 0px 20px 0px;
   margin-bottom: 5px
-  }
-
-/* DOWNLOAD-EASY ---*/
+}
 
 #download-donate {
 	background-attachment: scroll;
@@ -687,29 +629,39 @@ table tr img {
 	background-size: 100% 100%;
 }
 
+.package {
+  display: block;
+  float: left;
+  width: 250px;
+  margin: 0px;
+  padding: 20px 20px 20px 20px;
+}
+
 .package h2,
 .package em {
   display: block;
   width: 100%;
   text-align: left;
-  }
+}
 
 .package h2 {
   padding-top: 10px;
   padding-bottom: 5px;
-  }
+  margin-bottom: 3px;
+}
 
 .package em {
-  font-size: 1.2em;
+  font-size: 1.0em;
   padding-top: 8px;
   padding-bottom: 4px;
-  }
+}
 
 .package p {
   padding-left: 0px;
   font-size: 15px;
   text-align: justify;
-  }
+  margin-top: 16px;
+}
 
 .package p.alt-dl {
   text-align: left;
@@ -723,15 +675,6 @@ table tr img {
   text-align: left;
   width: 100%;
   font-size: 15px;
-}
-
-.all-dl a{
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.all-dl a:hover{
-  text-decoration: underline;
 }
 
 .open {
@@ -1452,12 +1395,72 @@ p.blogDate {
 }
 
 /* Accordion for download page  */
-.accordion.download label {
-  margin-left: 50px;
-  padding-left: 50px;
+.dlcontent {
+  margin: 25px;
+  font-family: sans-serif;
 }
-.tor-source {
-  margin-left:75px;
+.dlcontent h1 {
+  padding: 25px;
+  text-align: center;
+  margin: 10px 50px;
+}
+
+.dlcontent section > p {
+  margin-left: 50px;
+}
+
+.tor-source,
+.dlcontent .nav {
   float: left;
 }
+.dlcontent .nav ul {
+  list-style: none;
+  margin: 0px;
+}
+.dlcontent .nav li {
+  display: block;
+  margin: 0px;
+  padding: 0px;
+  font-size: 1em;
+  font-weight: bold;
+  height: 33px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  width: 250px;
+  background: url("../images/table-title.jpg") repeat-x left bottom #885ca4;
+}
+.dlcontent .nav li a {
+  color: #fff;
+}
+
+.accordion.download label {
+  margin-left: 25px;
+  padding-left: 30px;
+}
+
+.accordion.download input:checked ~ article {
+  padding:20px;
+  border: solid 1px #66a516;
+}
+.dltor,
+section#torbrowser .os,
+section#torbrowser .lang {
+  clear: both;
+}
+
+table#packages th {
+  padding: 10px;
+}
+
+.tblang th {
+  text-align: center;
+  font-weight: bold;
+}
+.accordion.download article h2 {
+  font-family: sans-serif;
+  font-size: 2em;
+  text-align: center;
+  margin: 25px;
+}
+
 /* END ACCORDION */
